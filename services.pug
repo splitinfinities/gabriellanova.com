@@ -1,0 +1,92 @@
+extends partials/layout.pug
+
+block vars
+	- var theme = "yellow";
+	- var tab = "services";
+	- var title = "Services";
+	- var description = "William M. Riley is a Freelance Product Developer. Here's what he does!";
+	- var keywords = "";
+
+block hero
+	copy-wrap(align="left")
+		h1.fs-massive.theme-base5.fw8.lh-solid Services
+		p.fs5.lh-copy.theme-complement6 Your boy is a full-stack engineer with a strong eye for design. Strategically using technology to solve design problems is my jam. And I love teaching people about the different ways to use different&nbsp;technologies.
+
+block content
+	//- Engineering
+	stellar-layout.bg-theme-complement9.theme-yellow.complement-indigo
+		copy-wrap(align="left")
+			h1.theme-base2.fw6 Engineering
+				br
+				small.theme-complement2.fs6 Front-end, Back-end, Applications, Accessibility, Performance, Testing
+			p.fs6.lh-copy.white I love making things come to life in the browser. I’m super comfortable working with Node, Ruby, PHP, HTML, React, Vue, ES6+, TypeScript, and my favorite plain ol&rsquo; CSS. and I&rsquo;m learning Go 😱. I love building interfaces, apps, and websites. Whether it’s a simple, performant marketing site or a big, fancy interface talking to multiple APIs - that&rsquo;s my&nbsp;jam.
+			hr.mv4.bg-theme-complement8
+			p
+				stellar-tag(color="theme-base7").mb1.mr1 JavaScript (ES6+)
+				stellar-tag(color="theme-base7").mb1.mr1 TypeScript
+				stellar-tag(color="theme-base7").mb1.mr1 CSS
+				stellar-tag(color="theme-base7").mb1.mr1 Node
+				stellar-tag(color="theme-base7").mb1.mr1 React
+				stellar-tag(color="theme-base7").mb1.mr1 Vue
+				stellar-tag(color="theme-base7").mb1.mr1 Express
+				stellar-tag(color="theme-base7").mb1.mr1 Polymer
+				stellar-tag(color="theme-base7").mb1.mr1 Ruby
+				stellar-tag(color="theme-base7").mb1.mr1 Ruby on Rails
+				stellar-tag(color="theme-base7").mb1.mr1 PHP
+				stellar-tag(color="theme-base7").mb1.mr1 Laravel
+				stellar-tag(color="theme-base7").mb1.mr1 Postgres
+				stellar-tag(color="theme-base7").mb1.mr1 MySQL
+
+	//- Strategy
+	stellar-layout.bg-theme-complement9.theme-lime.complement-violet
+		copy-wrap(align="right")
+			h1.theme-base2.fw6 Strategy
+				br
+				small.theme-complement2.fs6 Project planning, scoping, exploration, wire-framing, prototyping, user testing
+			p.fs6.lh-copy.white A great idea can be easy to come by, but it&rsquo;s always hard to make a reality. It involves planning, conversations, and sketching. Verifying that you have a clear idea of the problems you want to solve is what strategy is all about. I have plenty of experience finding and solving problems that improve the big ass numbers like acquisition, retention, and engagement. Let&rsquo;s get that MRR&nbsp;up!!&nbsp;📈
+			hr.mv4.bg-theme-complement8
+			p
+				stellar-tag(color="theme-base7").mb1.mr1 Jira/Atlassian
+				stellar-tag(color="theme-base7").mb1.mr1 Basecamp
+				stellar-tag(color="theme-base7").mb1.mr1 Trello
+				stellar-tag(color="theme-base7").mb1.mr1 Hubspot
+				stellar-tag(color="theme-base7").mb1.mr1 Whimsical
+				stellar-tag(color="theme-base7").mb1.mr1 Agile
+				stellar-tag(color="theme-base7").mb1.mr1 Kanban
+				stellar-tag(color="theme-base7").mb1.mr1 Scrum
+				stellar-tag(color="theme-base7").mb1.mr1 Business Modeling
+
+	//- Design
+	stellar-layout.bg-theme-complement9.theme-green.complement-blue
+		copy-wrap(align="left")
+			h1.theme-base2.fw6 Design
+				br
+				small.theme-complement2.fs6 Design Systems, Motion, Animation, Responsive, Sound
+			p.fs6.lh-copy.white When I&rsquo;m doing UI Design, I&rsquo;m focused on making a cohesive design language. I lead with design systems, because I try really hard to make sure I&rsquo;m using reusable, realistic, and testable components. I make a design system for every frontend&nbsp;project.
+			hr.mv4.bg-theme-complement8
+			p
+				stellar-tag(color="theme-base7").mb1.mr1 Sketch
+				stellar-tag(color="theme-base7").mb1.mr1 Figma
+				stellar-tag(color="theme-base7").mb1.mr1 Invision
+				stellar-tag(color="theme-base7").mb1.mr1 Invision Studio
+				stellar-tag(color="theme-base7").mb1.mr1 Webflow
+				stellar-tag(color="theme-base7").mb1.mr1 Zeplin
+				stellar-tag(color="theme-base7").mb1.mr1 Lottie
+				stellar-tag(color="theme-base7").mb1.mr1 Hemingway
+				stellar-tag(color="theme-base7").mb1.mr1 Contrast
+				stellar-tag(color="theme-base7").mb1.mr1 Notion
+
+	//- Data
+	stellar-layout.bg-theme-complement9.theme-lime.complement-cyan
+		copy-wrap(align="right")
+			h1.theme-base2.fw6 Data
+				br
+				small.theme-complement2.fs6 Data Visualization, Data Engineering, ETL processing
+			p.fs6.lh-copy.white Working with data, understanding the correlation between a collection of numbers so you can understand how well or poor your products or campaigns are running, that&rsquo;s right, your boy can do that. As an engineer, as a designer, and as a strategist - it&rsquo;s important to understand how to measure success. I can help you answer any kinds of&nbsp;questions.
+			hr.mv4.bg-theme-complement8
+			p
+				stellar-tag(color="theme-base7").mb1.mr1 Tableau
+				stellar-tag(color="theme-base7").mb1.mr1 Highcharts
+				stellar-tag(color="theme-base7").mb1.mr1 Stitch
+				stellar-tag(color="theme-base7").mb1.mr1 Hubspot
+				stellar-tag(color="theme-base7").mb1.mr1 Redshift
