@@ -1,0 +1,21 @@
+{
+  "title": "Split Infinities",
+  "url": "https://splitinfinities.com/blog/",
+  "language": "en",
+  "description": "Ramblings about design, code, comics, and movies.",
+  "feed": {
+    "subtitle": "Ramblings about design, code, comics, and movies.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://splitinfinities.com/blog/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://splitinfinities.com/blog/feed/feed.json"
+  },
+  "author": {
+    "name": "William M. Riley",
+    "email": "will@splitinfinities.com",
+    "url": "https://splitinfinities.com/blog/about/"
+  }
+}

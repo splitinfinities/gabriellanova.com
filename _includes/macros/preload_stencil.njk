@@ -1,0 +1,8 @@
+{%- macro preload_stencil(elements, stencil, path) -%}
+  <link rel="preconnect" href="https://unpkg.com/" crossorigin>
+  <link rel="dns-prefecth" href="https://unpkg.com/"/>
+
+  {% for name in elements | elementFileNames(stencil) %}
+    <link rel="preload" href="{{path}}{{name}}" as="script" />
+  {% endfor %}
+{%- endmacro -%}

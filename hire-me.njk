@@ -1,0 +1,82 @@
+---
+layout: layouts/base.njk
+name: Hire Me
+description: I would love to work with you - let's collaborate!
+permalink: /hire-me/
+show_hero: true
+hero_header: Hire Me
+hero_content: Let's collaborate!
+---
+
+<midwest-theme base="indigo" complement="cyan" inert="inert" system></midwest-theme>
+<midwest-layout align="top">
+    <section>
+        <midwest-card>
+            <header class="flex p-0 overflow-hidden">
+                <midwest-tabs class="p-0 m-0" height="auto" size="small" name="contact-tabs" block="block">
+                    <midwest-tab href="#project" open="open">Make something for me</midwest-tab>
+                    <midwest-tab href="#speaker">Speak at my conference</midwest-tab>
+                    <midwest-tab href="#question">Answer a question</midwest-tab>
+                </midwest-tabs>
+            </header>
+            <section>
+                <midwest-content for="contact-tabs" id="project" open="open">
+                    <midwest-form class="mb0" action="https://data.splitinfinities.com/project" method="post">
+                        <midwest-grid cols="1" responsive="false">
+                            <midwest-grid column-width="300">
+                                <midwest-input required="required" name="project[name]" placeholder="Shoulder Socks" label="My Project is called"></midwest-input>
+                                <midwest-select required="required" name="project[budget]" overlay="overlay" value="$10,000 - $15,000" label="I've got a budget of...">
+                                    <midwest-item selectable="selectable" value="less than $10,000">Less than $10,000</midwest-item>
+                                    <midwest-item selectable="selectable" value="$10,000 - $15,000">$10,000 - $15,000</midwest-item>
+                                    <midwest-item selectable="selectable" value="$15,000 - $25,000">$15,000 - $25,000</midwest-item>
+                                    <midwest-item selectable="selectable" value="+$25,000">+$25,000</midwest-item>
+                                </midwest-select>
+                                <midwest-input required="required" name="project[body]" type="textarea" placeholder="Tell me a little bit or a lotta bit about your project. What problem do you need solved? What is your timeline? Is this a tight turnaround? How many people will need to review? And whatever else you can think of!" label="What problem are you trying to solve?"></midwest-input>
+                                <midwest-grid cols="2" column-width="200">
+                                    <midwest-input required="required" name="project[client_name]" placeholder="First &amp; Last Name" label="First &amp; Last Name"></midwest-input>
+                                    <midwest-input required="required" name="project[phone]" type="phone" placeholder="Phone Number" label="Phone Number"></midwest-input>
+                                    <midwest-input required="required" name="project[email]" type="email" placeholder="Email Address" label="Email Address"></midwest-input>
+                                    <midwest-input name="project[company]" placeholder="ReallyCoolOrg" label="Company/Organization"></midwest-input>
+                                </midwest-grid>
+                            </midwest-grid>
+                            <midwest-button block="block" size="large" tag="submit">Send!</midwest-button>
+                        </midwest-grid>
+                    </midwest-form>
+                </midwest-content>
+                <midwest-content for="contact-tabs" id="speaker">
+                    <midwest-form action="https://data.splitinfinities.com/conference" method="post">
+                        <midwest-grid cols="1" responsive="false">
+                            <midwest-grid column-width="300">
+                                <midwest-input required="required" name="conference[name]" placeholder="ReallyCoolConf" label="My Conference is called"></midwest-input>
+                                <midwest-grid class="height-2" cols="2" column-width="200">
+                                    <midwest-input required="required" name="conference[client_name]" placeholder="First &amp; Last Name" label="First &amp; Last Name"></midwest-input>
+                                    <midwest-input required="required" name="conference[phone]" type="phone" placeholder="Phone Number" label="hone Number"></midwest-input>
+                                    <midwest-input required="required" name="conference[email]" type="email" placeholder="Email Address" label="Email Address"></midwest-input>
+                                    <midwest-input name="conference[company]" placeholder="ReallyCoolOrg" label="Company/Organization"></midwest-input>
+                                </midwest-grid>
+                                <midwest-input required="required" name="conference[body]" type="textarea" placeholder="Is about having a great time and making new friends." label="Tell me what the conference is all about..."></midwest-input>
+                            </midwest-grid>
+                            <midwest-button block="block" size="large" tag="submit">Send!</midwest-button>
+                        </midwest-grid>
+                    </midwest-form>
+                </midwest-content>
+                <midwest-content for="contact-tabs" id="question">
+                    <midwest-form class="mb0" action="https://data.splitinfinities.com/contact" method="post">
+                        <midwest-grid cols="1" responsive="false">
+                            <midwest-grid column-width="300">
+                                <midwest-input required="required" name="contact[body]" type="textarea" placeholder="Why is the ocean blue? How does dropping a rare earth magnet on a copper plate react? What's your favorite color?" label="Ask away!"></midwest-input>
+                                <midwest-grid cols="2" column-width="200">
+                                    <midwest-input required="required" name="contact[client_name]" placeholder="First &amp; Last Name" label="First &amp; Last Name"></midwest-input>
+                                    <midwest-input required="required" name="contact[phone]" type="phone" placeholder="Phone Number" label="Phone Number"></midwest-input>
+                                    <midwest-input required="required" name="contact[email]" type="email" placeholder="Email Address" label="Email Address"></midwest-input>
+                                    <midwest-input name="contact[company]" placeholder="ReallyCoolOrg" label="Company/Organization"></midwest-input>
+                                </midwest-grid>
+                            </midwest-grid>
+                            <midwest-button block="block" size="large" tag="submit">Send!</midwest-button>
+                        </midwest-grid>
+                    </midwest-form>
+                </midwest-content>
+            </section>
+        </midwest-card>
+    </section>
+</midwest-layout>

@@ -1,0 +1,95 @@
+{%- from "../macros/hero.njk" import hero -%}
+{%- from "../macros/home_hero.njk" import home_hero -%}
+{%- from "../macros/preload_stencil.njk" import preload_stencil -%}
+{%- from "../macros/enqueue_design.njk" import enqueue_design -%}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>{{ title or metadata.title }} • {{name}}</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html-; charset=UTF-8" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta itemprop="name" content="{{ title or metadata.title }} • {{name}}" />
+    <meta itemprop="image" content="{{metadata.image}}" />
+    <meta name="description" content="{{metadata.description}}" />
+    <meta name="keywords" content="{{metadata.keywords}}" />
+    <meta property="og:title" content="{{ title or metadata.title }}" />
+    <meta property="og:description" content="{{metadata.description}}" />
+    <meta property="og:site_url" content="{{metadata.site_url}}" />
+    <meta property="og:image" content="{{metadata.image}}" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:creator" content="@splitinfinities" />
+    <meta property="twitter:site" content="@splitinfinities" />
+    <meta property="twitter:title" content="{{ title or metadata.title }}" />
+    <meta property="twitter:image" content="{{metadata.image}}" />
+    <meta property="twitter:url" content="{{metadata.site_url}}" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="application-name" content="{{ title or metadata.title }}" />
+    <meta name="apple-mobile-web-app-title" content="{{ title or metadata.title }}" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+    <link rel="preload" href="/assets/img/favicon.png" as="image" />
+    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+    <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+    {% if "production" | isEnvironment %}
+        {{ preload_stencil(preload_elements, stencil.formats.esmBrowser, "https://unpkg.com/@midwest-design/core@0.0.15/dist/core/") }}
+        {{ enqueue_design() }}
+    {% else %}
+        <script src="/assets/js/script.js"></script>
+    {% endif %}
+</head>
+
+<body>
+    <midwest-pjax></midwest-pjax>
+    <midwest-theme base="{{theme}}" complement="{{complement}}" system body>
+        <midwest-progress class="fixed top-0 left-0 right-0 z-50" slender="slender"></midwest-progress>
+        <header class="fixed top-0 w-full z-40 h-12 bg-white">
+            <midwest-grid class="flex flex-nowrap" style="gap: 1rem;">
+                <midwest-tabs block="block">
+                  {%- for entry in collections.all | eleventyNavigation %}
+                    <midwest-tab href="{{ entry.url | url }}" tag="link" {% if entry.url == page.url %}open{% endif %}>{{ entry.title }}</midwest-tab>
+                  {%- endfor %}
+                </midwest-tabs>
+                {# <midwest-button href="/hire-me" tag="link" style="--width: auto">Hire me</midwest-button> #}
+            </midwest-grid>
+        </header>
+        <main class="min-h-screen mt-12 {% if templateClass %}{{ templateClass }}{% endif %}" id="main">
+            <animate-presence>
+              {% if show_hero and show_hero !== "home" %}
+                {{ hero(hero_header, hero_content, hero_image_name) }}
+              {% endif %}
+              {% if show_hero === "home" %}
+                {{ home_hero(hero_image_name) }}
+              {% endif %}
+
+              {{ content | safe }}
+            </animate-presence>
+            {# {% if hide_footer !== true %}
+            <midwest-layout size="small">
+                <midwest-starscape></midwest-starscape>
+                <midwest-grid padding="padding">
+                    <midwest-card class="overflow-hidden shadow-lg" tag="a" href="/hire-me" style="--background: var(--theme-6); --background-active: var(--theme-7); --border: 0;">
+                        <section>
+                            <copy-wrap class="relative z-10" align="center">
+                                <midwest-long-shadow>
+                                    <h1 class="text-5xl text-theme-0 complement-{{theme}}">Like what you see?!</h1>
+                                </midwest-long-shadow>
+                                <midwest-button class="relative theme-{{complement}}" tag="span" block="block" size="large">Hire me!</midwest-button>
+                            </copy-wrap>
+                        </section>
+                    </midwest-card>
+                </midwest-grid>
+            </midwest-layout>
+            {% endif %} #}
+        </main>
+    </midwest-theme>
+
+    <!-- Current page: {{ page.url | url }} -->
+</body>
+
+</html>

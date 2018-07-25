@@ -1,0 +1,70 @@
+---
+layout: layouts/home.njk
+title: Split Infinities
+name: Home
+show_hero: home
+hero_image_name: will
+preload_elements: [midwest-starscape, midwest-theme]
+eleventyNavigation:
+  key: 🤔 Split Infinities
+  order: 1
+---
+
+<midwest-theme base="red" complement="indigo" inert="inert" system></midwest-theme>
+<midwest-theme base="blue" complement="cyan">
+    <midwest-layout class="bg-theme-7 bg-gradient-to-r from-theme-7 to-theme-9" type="supporting-content-right" align="top" size="large">
+        <section>
+            <copy-wrap align="left">
+                <midwest-tag color="theme">My Job</midwest-tag>
+                <h1 class="text-white">I work on Stencil</h1>
+                <h4 class="text-theme-1">A Web Component compiler</h4>
+                <p class="text-white">Stencil is your swiss army knife for building reusable, scalable component libraries, apps, and -- my personal favorite -- design systems. I help improve the compiler, the features it offers, squash bugs, and figure out integrations. </p>
+            </copy-wrap>
+        </section>
+        <aside>
+            <midwest-image class="block border border-theme-2 rounded overflow-hidden shadow-lg" width="2792" height="1574" preload="/assets/img/stencil/thumb.jpg" alt="{{description}}">
+                <source srcset="/assets/img/stencil/full.jpg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
+                <source srcset="/assets/img/stencil/medium.jpg" media="(min-width:1023px)" />
+                <source srcset="/assets/img/stencil/medium.jpg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
+                <source srcset="/assets/img/stencil/small.jpg" media="(max-width:640px)" />
+            </midwest-image>
+        </aside>
+    </midwest-layout>
+</midwest-theme>
+<midwest-layout class="bg-theme-7 bg-gradient-to-r from-theme-7 to-theme-9" type="supporting-content" align="top" size="large">
+    <section class="sticky" style="top: 4rem">
+      <copy-wrap align="right">
+          {% set maxPosts = collections.posts.length | min(1) %}
+          {% set postslist = collections.posts | head(-1) %}
+          {% set postslistCounter = collections.posts | length %}
+
+          <midwest-tag color="theme">My Blog</midwest-tag>
+          <h1 class="text-white">Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h1>
+          <h4 class="text-theme-1">I share my thoughts about stuff I enjoy on my blog.</h4>
+          <p class="text-white">More posts can be found in <a href="{{ '/posts/' | url }}" class="text-theme-0 hover:text-theme-1">the archive</a>.</p>
+      </copy-wrap>
+    </section>
+    <aside>
+      {% include "postslist.njk" %}
+    </aside>
+</midwest-layout>
+<midwest-theme base="green" complement="orange">
+    <midwest-layout class="bg-theme-7 bg-gradient-to-r from-theme-7 to-theme-9" type="supporting-content-right" align="top" size="large">
+        <section>
+            <copy-wrap align="left">
+                <midwest-tag color="theme">My Design System</midwest-tag>
+                <h1 class="text-white">Midwest</h1>
+                <h4 class="text-theme-2">A Home Grown Design System</h4>
+                <p class="text-white">Midwest, originally called Stellar, is a pet project of mine. The goal of Midwest is to produce an easy to use running list of the most interesting, performant, and accessible web components available. This site is built with Midwest!</p>
+            </copy-wrap>
+        </section>
+        <aside>
+            <midwest-image class="border border-theme-2 rounded overflow-hidden shadow-lg" width="2792" height="1574" preload="/assets/img/midwest/thumb.jpg">
+                <source srcset="/assets/img/midwest/full.jpg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
+                <source srcset="/assets/img/midwest/medium.jpg" media="(min-width:1023px)" />
+                <source srcset="/assets/img/midwest/medium.jpg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
+                <source srcset="/assets/img/midwest/small.jpg" media="(max-width:640px)" />
+            </midwest-image>
+        </aside>
+    </midwest-layout>
+</midwest-theme>

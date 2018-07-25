@@ -1,0 +1,172 @@
+---
+layout: layouts/base.njk
+name: Services
+description: William M. Riley is a Freelance Product Developer. Here's what he does!
+permalink: /services/
+show_hero: true
+hero_header: Services
+hero_content: Your boy is a full-stack engineer with a strong eye for design. Strategically using technology to solve design problems is my jam. And I love teaching people about the different ways to use different&nbsp;technologies.
+hero_image_name: services
+eleventyNavigation:
+    key: Services
+    order: 3
+---
+
+<midwest-theme base="indigo" complement="yellow" inert="inert" system></midwest-theme>
+
+{# Engineering #}
+<midwest-layout class="theme-yellow complement-indigo bg-complement-8 overflow-hidden" style="--layout: 2fr 1fr; --layout-small: 1fr 1fr;" size="large">
+    <section>
+        <copy-wrap align="left">
+            <midwest-long-shadow length="150" direction="top-left" shade="7" complement="complement">
+                <h1 class="font-black text-5xl text-theme-2">Engineering</h1>
+            </midwest-long-shadow>
+            <h6 class="text-theme-1 text-2xl">Front-end, Back-end, Applications, Accessibility, Performance,&nbsp;Testing</h6>
+            <p class="leading-normal text-theme-0">I love making things come to life in the browser. I’m super comfortable working with Node, Ruby, PHP, HTML, React, Vue, ES6+, TypeScript, and my favorite plain ol&rsquo; CSS. and I&rsquo;m learning Go 😱. I love building interfaces, apps, and websites. Whether it’s a simple, performant marketing site or a big, fancy interface talking to multiple APIs - that&rsquo;s my&nbsp;jam.</p>
+            <hr class="my-6 border-complement-9" />
+            <p class="flex flex-wrap" style="gap: 0.5rem">
+                <midwest-tag size="tiny" color="indigo" pill="pill">JavaScript (ES6+)</midwest-tag>
+                <midwest-tag size="tiny" color="indigo" pill="pill">TypeScript</midwest-tag>
+                <midwest-tag size="tiny" color="indigo" pill="pill">CSS</midwest-tag>
+                <midwest-tag size="tiny" color="indigo" pill="pill">Node</midwest-tag>
+                <midwest-tag size="tiny" color="indigo" pill="pill">React</midwest-tag>
+                <midwest-tag size="tiny" color="indigo" pill="pill">Vue</midwest-tag>
+                <midwest-tag size="tiny" color="indigo" pill="pill">Express</midwest-tag>
+                <midwest-tag size="tiny" color="indigo" pill="pill">Polymer</midwest-tag>
+                <midwest-tag size="tiny" color="indigo" pill="pill">Ruby</midwest-tag>
+                <midwest-tag size="tiny" color="indigo" pill="pill">Ruby on Rails</midwest-tag>
+                <midwest-tag size="tiny" color="indigo" pill="pill">PHP</midwest-tag>
+                <midwest-tag size="tiny" color="indigo" pill="pill">Laravel</midwest-tag>
+                <midwest-tag size="tiny" color="indigo" pill="pill">Golang</midwest-tag>
+                <midwest-tag size="tiny" color="indigo" pill="pill">Postgres</midwest-tag>
+                <midwest-tag size="tiny" color="indigo" pill="pill">MySQL</midwest-tag>
+            </p>
+        </copy-wrap>
+    </section>
+    <aside>
+        <midwest-video class="s-right-point" overlay="overlay" preload="auto" autoplay="autoplay" muted="muted" playsinline="playsinline" poster="/assets/video/engineering-sd.jpg" controls="false">
+            <source src="/assets/video/engineering-sd.mp4?c=1" />
+            <source src="/assets/video/engineering-sd.mp4?c=1" type="video/mp4" media="(min-device-pixel-ratio:2), (-webkit-min-device-pixel-ratio:2), (min--moz-device-pixel-ratio:2), (-o-min-device-pixel-ratio:2)" />
+            <source src="/assets/video/engineering-sd.mp4?c=1" type="video/mp4" media="(max-device-pixel-ratio:1), (-webkit-max-device-pixel-ratio:1), (max--moz-device-pixel-ratio:1), (-o-max-device-pixel-ratio:1)" />
+        </midwest-video>
+    </aside>
+    <div class="col-span-full">
+        <h4 class="mb-4 text-white">Recent posts about Engineering</h4>
+        {% set postslist = collections["engineering"] | head(-3) %}
+        {% include "postslist.njk" %}
+    </div>
+</midwest-layout>
+
+{# Strategy #}
+<midwest-layout class="theme-lime complement-violet bg-complement-8 overflow-hidden" style="--layout: 1fr 2fr; --layout-small: 1fr 1fr;" size="large">
+    <section>
+        <copy-wrap align="left">
+            <midwest-long-shadow length="150" direction="top-right" shade="7" complement="complement">
+                <h1 class="font-black text-5xl text-theme-2">Strategy</h1>
+            </midwest-long-shadow>
+            <h6 class="text-theme-1 text-2xl">Project Planning, Scoping, Exploration, Wire-Framing, Prototyping, User&nbsp;Testing</h6>
+            <p class="leading-normal text-theme-0">A great idea can be easy to come by, but it&rsquo;s always hard to make a reality. It involves planning, conversations, and sketching. Verifying that you have a clear idea of the problems you want to solve is what strategy is all about. I have plenty of experience finding and solving problems that improve the big ass numb-ers like acquisition, retention, and engagement. Let&rsquo;s get that mr-R&nbsp;up!!&nbsp;📈</p>
+            <hr class="my-6 border-complement-9" />
+            <p class="flex flex-wrap" style="gap: 0.5rem">
+                <midwest-tag size="tiny" color="violet" pill="pill">Jira/Atlassian</midwest-tag>
+                <midwest-tag size="tiny" color="violet" pill="pill">Basecamp</midwest-tag>
+                <midwest-tag size="tiny" color="violet" pill="pill">Trello</midwest-tag>
+                <midwest-tag size="tiny" color="violet" pill="pill">Hubspot</midwest-tag>
+                <midwest-tag size="tiny" color="violet" pill="pill">Whimsical</midwest-tag>
+                <midwest-tag size="tiny" color="violet" pill="pill">Agile</midwest-tag>
+                <midwest-tag size="tiny" color="violet" pill="pill">Kanban</midwest-tag>
+                <midwest-tag size="tiny" color="violet" pill="pill">Scrum</midwest-tag>
+                <midwest-tag size="tiny" color="violet" pill="pill">Business Modeling</midwest-tag>
+            </p>
+        </copy-wrap>
+    </section>
+    <aside class="order-first">
+        <midwest-video class="s-left-point" overlay="overlay" preload="auto" autoplay="autoplay" muted="muted" playsinline="playsinline" poster="/assets/video/strategy-sd.jpg" controls="false">
+            <source src="/assets/video/strategy-sd.mp4?c=1" />
+            <source src="/assets/video/strategy-sd.mp4?c=1" type="video/mp4" media="(min-device-pixel-ratio:2), (-webkit-min-device-pixel-ratio:2), (min--moz-device-pixel-ratio:2), (-o-min-device-pixel-ratio:2)" />
+            <source src="/assets/video/strategy-sd.mp4?c=1" type="video/mp4" media="(max-device-pixel-ratio:1), (-webkit-max-device-pixel-ratio:1), (max--moz-device-pixel-ratio:1), (-o-max-device-pixel-ratio:1)" />
+        </midwest-video>
+    </aside>
+    <div class="col-span-full">
+        <h4 class="mb-4 text-white">Recent posts about Strategy</h4>
+        {% set postslist = collections["strategy"] | head(-3) %}
+        {% include "postslist.njk" %}
+    </div>
+</midwest-layout>
+
+{# Design #}
+<midwest-layout class="theme-green complement-blue bg-complement-8 overflow-hidden" style="--layout: 2fr 1fr; --layout-small: 1fr 1fr;" size="large">
+    <section>
+        <copy-wrap align="left">
+            <midwest-long-shadow length="150" direction="top-left" shade="7" complement="complement">
+                <h1 class="font-black text-5xl text-theme-2">Design</h1>
+            </midwest-long-shadow>
+            <h6 class="text-theme-1 text-2xl">Design Systems, Motion, Animation, Responsive,&nbsp;Sound</h6>
+            <p class="leading-normal text-theme-0">When I&rsquo;m doing UI Design, I&rsquo;m focused on making a cohesive design language. I lead with design systems, because I try really hard to make sure I&rsquo;m using reusable, realistic, and testable components. I make a design system for every frontend&nbsp;project.</p>
+            <hr class="my-6 border-complement-9" />
+            <p class="flex flex-wrap" style="gap: 0.5rem">
+                <midwest-tag size="tiny" color="blue" pill="pill">Sketch</midwest-tag>
+                <midwest-tag size="tiny" color="blue" pill="pill">Figma</midwest-tag>
+                <midwest-tag size="tiny" color="blue" pill="pill">Invision</midwest-tag>
+                <midwest-tag size="tiny" color="blue" pill="pill">Invision Studio</midwest-tag>
+                <midwest-tag size="tiny" color="blue" pill="pill">Webflow</midwest-tag>
+                <midwest-tag size="tiny" color="blue" pill="pill">Zeplin</midwest-tag>
+                <midwest-tag size="tiny" color="blue" pill="pill">Lottie</midwest-tag>
+                <midwest-tag size="tiny" color="blue" pill="pill">Hemingway</midwest-tag>
+                <midwest-tag size="tiny" color="blue" pill="pill">Contrast</midwest-tag>
+                <midwest-tag size="tiny" color="blue" pill="pill">Notion </midwest-tag>
+            </p>
+        </copy-wrap>
+    </section>
+    <aside>
+        <midwest-video class="s-right-point" overlay="overlay" preload="auto" autoplay="autoplay" muted="muted" playsinline="playsinline" poster="/assets/video/design-sd.jpg" controls="false">
+            <source src="/assets/video/design-sd.mp4?c=1" />
+            <source src="/assets/video/design-sd.mp4?c=1" type="video/mp4" media="(min-device-pixel-ratio:2), (-webkit-min-device-pixel-ratio:2), (min--moz-device-pixel-ratio:2), (-o-min-device-pixel-ratio:2)" />
+            <source src="/assets/video/design-sd.mp4?c=1" type="video/mp4" media="(max-device-pixel-ratio:1), (-webkit-max-device-pixel-ratio:1), (max--moz-device-pixel-ratio:1), (-o-max-device-pixel-ratio:1)" />
+        </midwest-video>
+    </aside>
+    <div class="col-span-full">
+        <h4 class="mb-4 text-white">Recent posts about Design</h4>
+        {% set postslist = collections["design"] | head(-3) %}
+        {% include "postslist.njk" %}
+    </div>
+</midwest-layout>
+
+{# Data #}
+<midwest-layout class="theme-lime complement-cyan bg-complement-8 overflow-hidden" style="--layout: 1fr 2fr; --layout-small: 1fr 1fr;" size="large">
+    <section>
+        <copy-wrap align="left">
+            <midwest-long-shadow length="150" direction="top-right" shade="7" complement="complement">
+                <h1 class="font-black text-5xl text-theme-2">Data</h1>
+            </midwest-long-shadow>
+            <h6 class="text-theme-1 text-2xl">Data Visualization, Data Engineering, ETL&nbsp;Processing</h6>
+            <p class="leading-normal text-theme-0">Working with data and understanding the correlation between a collection of numbers to some real life problem so you can understand how your products or campaigns are running, that&rsquo;s right, your boy can do that. As an engineer, as a designer, and as a strategist - it&rsquo;s important to understand how to measure success. I can help you answer any kinds of&nbsp;questions.</p>
+            <hr class="my-6 border-complement-9" />
+            <p class="flex flex-wrap" style="gap: 0.5rem">
+                <midwest-tag size="tiny" color="cyan" pill="pill">Tableau</midwest-tag>
+                <midwest-tag size="tiny" color="cyan" pill="pill">Highcharts</midwest-tag>
+                <midwest-tag size="tiny" color="cyan" pill="pill">Stitch</midwest-tag>
+                <midwest-tag size="tiny" color="cyan" pill="pill">Hubspot</midwest-tag>
+                <midwest-tag size="tiny" color="cyan" pill="pill">Redshift</midwest-tag>
+                <midwest-tag size="tiny" color="cyan" pill="pill">Google BigQuery</midwest-tag>
+                <midwest-tag size="tiny" color="cyan" pill="pill">Firebase</midwest-tag>
+                <midwest-tag size="tiny" color="cyan" pill="pill">Spreadsheets</midwest-tag>
+                <midwest-tag size="tiny" color="cyan" pill="pill">Segment</midwest-tag>
+                <midwest-tag size="tiny" color="cyan" pill="pill">MixPanel</midwest-tag>
+                <midwest-tag size="tiny" color="cyan" pill="pill">ChartMogul</midwest-tag>
+            </p>
+        </copy-wrap>
+    </section>
+    <aside class="order-first">
+        <midwest-video class="s-left-point" overlay="overlay" preload="auto" autoplay="autoplay" muted="muted" playsinline="playsinline" poster="/assets/video/data-sd.jpg" controls="false">
+            <source src="/assets/video/data-sd.mp4?c=1" />
+            <source src="/assets/video/data-sd.mp4?c=1" type="video/mp4" media="(min-device-pixel-ratio:2), (-webkit-min-device-pixel-ratio:2), (min--moz-device-pixel-ratio:2), (-o-min-device-pixel-ratio:2)" />
+            <source src="/assets/video/data-sd.mp4?c=1" type="video/mp4" media="(max-device-pixel-ratio:1), (-webkit-max-device-pixel-ratio:1), (max--moz-device-pixel-ratio:1), (-o-max-device-pixel-ratio:1)" />
+        </midwest-video>
+    </aside>
+    <div class="col-span-full">
+        <h4 class="mb-4 text-white">Recent posts about Data</h4>
+        {% set postslist = collections["data"] | head(-3) %}
+        {% include "postslist.njk" %}
+    </div>
+</midwest-layout>
