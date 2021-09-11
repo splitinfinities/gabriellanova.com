@@ -11,22 +11,27 @@ eleventyNavigation:
 ---
 
 <midwest-theme base="red" complement="indigo" inert="inert" system></midwest-theme>
-<midwest-theme base="blue" complement="cyan">
+<midwest-theme base="blue" complement="cyan" dark>
     <midwest-layout class="bg-theme-7 bg-gradient-to-r from-theme-7 to-theme-9" type="supporting-content-right" align="top" size="large">
         <section>
             <copy-wrap align="left">
-                <midwest-tag color="theme">My Job</midwest-tag>
+                <midwest-tag color="theme" pill>My Job</midwest-tag>
                 <h1 class="text-white">I work on Stencil</h1>
-                <h4 class="text-theme-1">A Web Component compiler</h4>
+                <h2 class="text-theme-1 text-2xl">A Web Component compiler</h2>
                 <p class="text-white">Stencil is your swiss army knife for building reusable, scalable component libraries, apps, and -- my personal favorite -- design systems. I help improve the compiler, the features it offers, squash bugs, and figure out integrations. </p>
             </copy-wrap>
         </section>
         <aside>
             <midwest-image class="block border border-theme-2 rounded overflow-hidden shadow-lg" width="2792" height="1574" preload="/assets/img/stencil/thumb.jpg" alt="{{description}}">
-                <source srcset="/assets/img/stencil/full.jpg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
-                <source srcset="/assets/img/stencil/medium.jpg" media="(min-width:1023px)" />
-                <source srcset="/assets/img/stencil/medium.jpg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
-                <source srcset="/assets/img/stencil/small.jpg" media="(max-width:640px)" />
+                {% set image_name = "stencil" %}
+                <source srcset="/assets/img/{{image_name}}/full.jpg" type="image/jpeg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
+                <source srcset="/assets/img/{{image_name}}/full.webp" type="image/webp" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
+                <source srcset="/assets/img/{{image_name}}/medium.jpg" type="image/jpeg" media="(min-width:1023px)" />
+                <source srcset="/assets/img/{{image_name}}/medium.webp" type="image/webp" media="(min-width:1023px)" />
+                <source srcset="/assets/img/{{image_name}}/medium.jpg" type="image/jpeg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
+                <source srcset="/assets/img/{{image_name}}/medium.webp" type="image/webp" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
+                <source srcset="/assets/img/{{image_name}}/small.jpg" type="image/jpeg" media="(max-width:640px)" />
+                <source srcset="/assets/img/{{image_name}}/small.webp" type="image/webp" media="(max-width:640px)" />
             </midwest-image>
         </aside>
     </midwest-layout>
@@ -38,9 +43,9 @@ eleventyNavigation:
           {% set postslist = collections.posts | head(-1) %}
           {% set postslistCounter = collections.posts | length %}
 
-          <midwest-tag color="theme">My Blog</midwest-tag>
+          <midwest-tag color="theme" pill>My Blog</midwest-tag>
           <h1 class="text-white">Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h1>
-          <h4 class="text-theme-1">I share my thoughts about stuff I enjoy on my blog.</h4>
+          <h2 class="text-theme-1 text-2xl">I share my thoughts about stuff I enjoy on my blog.</h2>
           <p class="text-white">More posts can be found in <a href="{{ '/posts/' | url }}" class="text-theme-0 hover:text-theme-1">the archive</a>.</p>
       </copy-wrap>
     </section>
@@ -48,22 +53,27 @@ eleventyNavigation:
       {% include "postslist.njk" %}
     </aside>
 </midwest-layout>
-<midwest-theme base="green" complement="orange">
+<midwest-theme base="green" complement="orange" dark>
     <midwest-layout class="bg-theme-7 bg-gradient-to-r from-theme-7 to-theme-9" type="supporting-content-right" align="top" size="large">
         <section>
             <copy-wrap align="left">
-                <midwest-tag color="theme">My Design System</midwest-tag>
+                <midwest-tag color="theme" pill>My Design System</midwest-tag>
                 <h1 class="text-white">Midwest</h1>
-                <h4 class="text-theme-2">A Home Grown Design System</h4>
+                <h2 class="text-theme-2 text-2xl">A Home Grown Design System</h2>
                 <p class="text-white">Midwest, originally called Stellar, is a pet project of mine. The goal of Midwest is to produce an easy to use running list of the most interesting, performant, and accessible web components available. This site is built with Midwest!</p>
             </copy-wrap>
         </section>
         <aside>
             <midwest-image class="border border-theme-2 rounded overflow-hidden shadow-lg" width="2792" height="1574" preload="/assets/img/midwest/thumb.jpg">
-                <source srcset="/assets/img/midwest/full.jpg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
-                <source srcset="/assets/img/midwest/medium.jpg" media="(min-width:1023px)" />
-                <source srcset="/assets/img/midwest/medium.jpg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
-                <source srcset="/assets/img/midwest/small.jpg" media="(max-width:640px)" />
+                {% set image_name = "midwest" %}
+                <source srcset="/assets/img/{{image_name}}/full.jpg" type="image/jpeg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
+                <source srcset="/assets/img/{{image_name}}/full.webp" type="image/webp" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
+                <source srcset="/assets/img/{{image_name}}/medium.jpg" type="image/jpeg" media="(min-width:1023px)" />
+                <source srcset="/assets/img/{{image_name}}/medium.webp" type="image/webp" media="(min-width:1023px)" />
+                <source srcset="/assets/img/{{image_name}}/medium.jpg" type="image/jpeg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
+                <source srcset="/assets/img/{{image_name}}/medium.webp" type="image/webp" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
+                <source srcset="/assets/img/{{image_name}}/small.jpg" type="image/jpeg" media="(max-width:640px)" />
+                <source srcset="/assets/img/{{image_name}}/small.webp" type="image/webp" media="(max-width:640px)" />
             </midwest-image>
         </aside>
     </midwest-layout>

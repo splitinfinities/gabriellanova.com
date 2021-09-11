@@ -77,22 +77,26 @@
       </midwest-parallax-section>
       <midwest-parallax-section speed="9" style="contain: style layout;">
         <midwest-image class="border border-theme-2 rounded overflow-hidden shadow-lg ml-auto mr-12 mt-10 block relative z-20" width="2792" height="1574" preload="/assets/img/{{image_name}}/thumb.jpg" style="width: 50%;">
-          <source srcset="/assets/img/{{image_name}}/full.jpg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
-          <source srcset="/assets/img/{{image_name}}/medium.jpg" media="(min-width:1023px)" />
-          <source srcset="/assets/img/{{image_name}}/medium.jpg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
-          <source srcset="/assets/img/{{image_name}}/small.jpg" media="(max-width:640px)" />
+          <source srcset="/assets/img/{{image_name}}/full.jpg" type="image/jpeg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
+          <source srcset="/assets/img/{{image_name}}/full.webp" type="image/webp" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
+          <source srcset="/assets/img/{{image_name}}/medium.jpg" type="image/jpeg" media="(min-width:1023px)" />
+          <source srcset="/assets/img/{{image_name}}/medium.webp" type="image/webp" media="(min-width:1023px)" />
+          <source srcset="/assets/img/{{image_name}}/medium.jpg" type="image/jpeg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
+          <source srcset="/assets/img/{{image_name}}/medium.webp" type="image/webp" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
+          <source srcset="/assets/img/{{image_name}}/small.jpg" type="image/jpeg" media="(max-width:640px)" />
+          <source srcset="/assets/img/{{image_name}}/small.webp" type="image/webp" media="(max-width:640px)" />
         </midwest-image>
       </midwest-parallax-section>
       </midwest-parallax>
     </section>
     <section>
-      <midwest-card class="relative overflow-hidden bg-theme-8 z-30 mr-24 shadow-lg" style="--background: var(--theme-6); --border: 0;">
+      <midwest-card class="relative overflow-hidden bg-theme-8 z-30 sm:mr-48 md:mr-68  shadow-lg" style="--background: var(--theme-6); --border: 0;">
         <section>
           <copy-wrap align="center">
             <midwest-long-shadow length="150" direction="top-right">
-              <h1 class="font-black fs-massive text-white">{{header}}</h1>
+              <h1 class="font-black text-massive text-white">{{header}}</h1>
             </midwest-long-shadow>
-            <h4 class="text-theme-2 leading-normal">{{content}}</h1>
+            <h2 class="text-theme-2 leading-normal text-xl font-normal">{{content}}</h2>
           </copy-wrap>
         </section>
       </midwest-card>
