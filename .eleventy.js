@@ -7,8 +7,6 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const customCodeContainer = require("markdown-it-container");
 
-console.log(process.env.NODE_ENV);
-
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("manifest.json");
   eleventyConfig.addPassthroughCopy("assets/js");
@@ -28,7 +26,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
 
   eleventyConfig.addFilter("isEnvironment", (env) => {
-    return process.env.NODE_ENV === env;
+    return process.env.VERCEL_ENV === env;
   });
 
   eleventyConfig.addFilter("readableDate", (dateObj) => {
