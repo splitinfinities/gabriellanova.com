@@ -13,7 +13,7 @@ I finally decided to make a blog, which... might be good? I haven't blogged sinc
 
 A lot has changed in my life this year. I'm engaged to the love of my life (❤️ u Gab!), I moved to Austin, I met my father for the first time, I switched back to Engineering from Product Design, then within a month switched to Product Management (I'm the Product Manager for Ionic's Stencil!) So, suffice it to say, I have plenty to blab about here. 
 
-## Built with + Stencil
+## Built with Eleventy + Stencil
 
 BTW, this site is built with Eleventy and some Stencil built web components. For all this, I'm going to keep updating the features of this little site, especially as new things come out of the Stencil team's super hard work. I also want to try out Eleventy's SSR and prerendering features. I'm not quite launching with that, but I'll be trying to figure it out. 
 
