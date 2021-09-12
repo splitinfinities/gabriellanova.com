@@ -29,9 +29,9 @@ templateClass: tmpl-post
         <span>Tagged:</span>
         {%- for tag in tags | filterTagList -%}
           {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
-          <a href="{{ tagUrl | url }}" class="no-underline">
-            <midwest-tag color="theme" size="tiny">{{ tag }}</midwest-tag>
-          </a>
+          {# <a href="{{ tagUrl | url }}" class="no-underline"> #}
+            <midwest-tag color="{{ tag | tagColor }}" size="tiny">{{ tag }}</midwest-tag>
+          {# </a> #}
         {%- endfor %}
       </p> 
       <p class="text-theme-9 dm:text-theme-2"><midwest-time value="{{ page.date | htmlDateString }}" relative></midwest-time></p>

@@ -8,3 +8,11 @@ layout: layouts/home.njk
   {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
   <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
 {% endfor %}
+
+<midwest-theme base="orange" complement="violet" inert="inert" system></midwest-theme>
+<midwest-layout class="bg-gradient-to-r from-theme-3 to-complement-6 dm:from-theme-6 dm:to-complement-11 ">
+  <midwest-grid>
+    {% set postslist = entries %}
+    {% include "postslist.njk" %}
+  </midwest-grid>
+</midwest-layout>

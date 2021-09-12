@@ -50,11 +50,13 @@ eleventyNavigation:
             <source src="/assets/video/engineering-sd.mp4?c=1" type="video/mp4" media="(max-device-pixel-ratio:1), (-webkit-max-device-pixel-ratio:1), (max--moz-device-pixel-ratio:1), (-o-max-device-pixel-ratio:1)" />
         </midwest-video>
     </aside>
-    <div class="col-span-full">
-        <h4 class="mb-4 text-white">Recent posts about Engineering</h4>
-        {% set postslist = collections["engineering"] | head(-3) %}
-        {% include "postslist.njk" %}
-    </div>
+    {% set postslist = collections["engineering"] | head(-3) %}
+    {% if postslist.length !== 0 %}
+        <div class="col-span-full">
+            <h4 class="mb-4 text-white">Recent posts about Engineering</h4>
+            {% include "postslist.njk" %}
+        </div>
+    {% endif %}
 </midwest-layout>
 
 {# Strategy #}
@@ -87,11 +89,13 @@ eleventyNavigation:
             <source src="/assets/video/strategy-sd.mp4?c=1" type="video/mp4" media="(max-device-pixel-ratio:1), (-webkit-max-device-pixel-ratio:1), (max--moz-device-pixel-ratio:1), (-o-max-device-pixel-ratio:1)" />
         </midwest-video>
     </aside>
-    <div class="col-span-full">
-        <h4 class="mb-4 text-white">Recent posts about Strategy</h4>
-        {% set postslist = collections["strategy"] | head(-3) %}
-        {% include "postslist.njk" %}
-    </div>
+    {% set postslist = collections["strategy"] | head(-3) %}
+    {% if postslist.length !== 0 %}
+        <div class="col-span-full">
+            <h4 class="mb-4 text-white">Recent posts about Strategy</h4>
+            {% include "postslist.njk" %}
+        </div>
+    {% endif %}
 </midwest-layout>
 
 {# Design #}
@@ -125,11 +129,13 @@ eleventyNavigation:
             <source src="/assets/video/design-sd.mp4?c=1" type="video/mp4" media="(max-device-pixel-ratio:1), (-webkit-max-device-pixel-ratio:1), (max--moz-device-pixel-ratio:1), (-o-max-device-pixel-ratio:1)" />
         </midwest-video>
     </aside>
-    <div class="col-span-full">
-        <h4 class="mb-4 text-white">Recent posts about Design</h4>
-        {% set postslist = collections["design"] | head(-3) %}
-        {% include "postslist.njk" %}
-    </div>
+    {% set postslist = collections["design"] | head(-3) %}
+    {% if postslist.length !== 0 %}
+        <div class="col-span-full">
+            <h4 class="mb-4 text-white">Recent posts about Design</h4>
+            {% include "postslist.njk" %}
+        </div>
+    {% endif %}
 </midwest-layout>
 
 {# Data #}
@@ -164,9 +170,11 @@ eleventyNavigation:
             <source src="/assets/video/data-sd.mp4?c=1" type="video/mp4" media="(max-device-pixel-ratio:1), (-webkit-max-device-pixel-ratio:1), (max--moz-device-pixel-ratio:1), (-o-max-device-pixel-ratio:1)" />
         </midwest-video>
     </aside>
-    <div class="col-span-full">
-        <h4 class="mb-4 text-white">Recent posts about Data</h4>
-        {% set postslist = collections["data"] | head(-3) %}
-        {% include "postslist.njk" %}
-    </div>
+    {% set postslist = collections["data"] | head(-3) %}
+    {% if postslist.length !== 0 %}
+        <div class="col-span-full">
+            <h4 class="mb-4 text-white">Recent posts about Data</h4>
+            {% include "postslist.njk" %}
+        </div>
+    {% endif %}
 </midwest-layout>

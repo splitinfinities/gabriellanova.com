@@ -6,19 +6,11 @@ pagination:
 layout: layouts/home.njk
 permalink: /page-list/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber }}/{% endif %}
 ---
-<table>
-  <thead>
-    <tr>
-      <th>URL</th>
-      <th>Page Title</th>
-    </tr>
-  </thead>
-  <tbody>
-{%- for entry in entries %}
-  <tr>
-    <td><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></td>
-    <td>{{ entry.data.title }}</td>
-  </tr>
-{%- endfor %}
-  </tbody>
-</table>
+
+<midwest-theme base="orange" complement="violet" inert="inert" system></midwest-theme>
+<midwest-layout class="bg-gradient-to-r from-theme-3 to-complement-6 dm:from-theme-6 dm:to-complement-11 ">
+  <midwest-grid>
+    {% set postslist = entries %}
+    {% include "postslist.njk" %}
+  </midwest-grid>
+</midwest-layout>

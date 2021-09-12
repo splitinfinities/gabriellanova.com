@@ -10,14 +10,25 @@ pagination:
     - posts
     - tagList
   addAllPagesToCollections: true
+show_hero: true
 layout: layouts/home.njk
 eleventyComputed:
   title: Tagged “{{ tag }}”
+  hero_header: Tagged “{{ tag }}”
+  hero_content: It's a list of tags!
 permalink: /tags/{{ tag | slug }}/
 ---
-<h1>Tagged “{{ tag }}”</h1>
+<h1></h1>
 
-{% set postslist = collections[ tag ] %}
 {% include "postslist.njk" %}
 
-<p>See <a href="{{ '/tags/' | url }}">all tags</a>.</p>
+{# <p>See <a href="{{ '/tags/' | url }}">all tags</a>.</p> #}
+
+
+<midwest-theme base="orange" complement="violet" inert="inert" system></midwest-theme>
+<midwest-layout class="bg-gradient-to-r from-theme-3 to-complement-6 dm:from-theme-6 dm:to-complement-11 ">
+  <midwest-grid>
+    {% set postslist = collections[ tag ]  %}
+    {% include "postslist.njk" %}
+  </midwest-grid>
+</midwest-layout>
