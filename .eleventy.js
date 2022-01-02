@@ -9,6 +9,7 @@ const customCodeContainer = require("markdown-it-container");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("manifest.json");
+  eleventyConfig.addPassthroughCopy("resume.pdf");
   eleventyConfig.addPassthroughCopy("assets/js");
   eleventyConfig.addPassthroughCopy("assets/img");
   eleventyConfig.addPassthroughCopy("assets/vector");
