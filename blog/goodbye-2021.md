@@ -108,9 +108,9 @@ I finally started watching twin peaks! I really enjoy David Lynch now.
 
 We ended the month by going to platte state park for my now at-the-time girlfriend’s birthday (she’s my FIANCÉ now!!) 
 
-<midwest-image width="1024" height="568" preload="/assets/img/goodbye-2021/may/3-thumb.jpg" alt="...">
-    <source srcset="/assets/img/goodbye-2021/may/3.jpg" type="image/jpeg" />
-    <source srcset="/assets/img//goodbye-2021/may/3.webp" type="image/webp" />
+<midwest-image width="1024" height="568" preload="/assets/img/goodbye-2021/may/2-thumb.jpg" alt="...">
+    <source srcset="/assets/img/goodbye-2021/may/2.jpg" type="image/jpeg" />
+    <source srcset="/assets/img//goodbye-2021/may/2.webp" type="image/webp" />
 </midwest-image>
 
 ## June
