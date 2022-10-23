@@ -4,7 +4,7 @@
 {%- from "../macros/enqueue_design.njk" import enqueue_design -%}
 
 <!doctype html>
-<html lang="en" class="font-work-sans">
+<html lang="en" class="font-work-sans bg-white dm:bg-black">
 
 <head>
     <title>{{ title or metadata.title }} • {{name}}</title>
@@ -122,11 +122,11 @@
     {% endif %}
 </head>
 
-<body class="font-work-sans bg-white dm:bg-black">
+<body class="font-work-sans">
     <midwest-pjax></midwest-pjax>
     <midwest-theme base="{{theme}}" complement="{{complement}}" system body class="flex flex-wrap flex-col">
         <midwest-progress class="fixed top-0 left-0 right-0 z-50" slender></midwest-progress>
-        <header class="sticky top-0 w-full z-40 py-4 px-8 bg-white dm:bg-black order-first">
+        <header class="sticky top-0 w-full z-40 py-4 px-8 order-first">
             <midwest-grid class="h-full items-center">
                 <h1 class="text-black dm:text-white font-bona-nova text-3xl">
                     <a href="/" class="text-black dm:text-white no-underline">
