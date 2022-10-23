@@ -1,21 +1,21 @@
 {
-  "title": "Split Infinities",
-  "url": "https://splitinfinities.com/blog/",
+  "title": "Gabriella Nova",
+  "url": "https://gabriellanova.com/portfolio/",
   "language": "en",
-  "description": "Ramblings about design, code, comics, and movies.",
+  "description": "The work portfolio of Gabriella Nova",
   "feed": {
-    "subtitle": "Ramblings about design, code, comics, and movies.",
+    "subtitle": "The work portfolio of Gabriella Nova",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "id": "https://splitinfinities.com/blog/"
+    "id": "https://gabriellanova.com/portfolio/"
   },
   "jsonfeed": {
     "path": "/feed/feed.json",
-    "url": "https://splitinfinities.com/blog/feed/feed.json"
+    "url": "https://gabriellanova.com/portfolio/feed/feed.json"
   },
   "author": {
-    "name": "William M. Riley",
-    "email": "will@splitinfinities.com",
-    "url": "https://splitinfinities.com/blog/about/"
+    "name": "Gabriella Nova",
+    "email": "work@gabriellanova.com",
+    "url": "https://gabriellanova.com/portfolio/about/"
   }
 }

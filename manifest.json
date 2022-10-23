@@ -1,10 +1,10 @@
 {
-  "name": "Split Infinities",
-  "short_name": "Split Infinities",
+  "name": "Gabriella Nova",
+  "short_name": "Gabriella Nova",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#fff",
-  "description": "My site & blog",
+  "description": "Gabriella Nova's Website",
   "icons": [
     {
       "src": "assets/img/favicon/favicon-48.png",

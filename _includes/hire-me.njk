@@ -1,0 +1,20 @@
+<midwest-card tag="a" href="/hire-me" 
+padding="small" small-size="250"
+style="grid-column: {{grid_column}};"
+>
+  <section>
+    <copy-wrap clamp="2">
+      <p class="text-sm dm:text-theme-0">{{ post.data.description }}</p>
+    </copy-wrap>
+  </section>
+  <footer class="flex sm:wrap gap-3">
+    <copy-wrap>
+      <h4 class="font-bona-nova">Want to hire me?</h4>
+      <p>Let's collaborate.</p>
+      <midwest-button type="link" icon="true" class="theme-red" padding="small">
+        <ion-icon slot="icon" name="share"></ion-icon>
+        Hire me
+      </midwest-button>
+    </copy-wrap>
+  </footer>
+</midwest-card>

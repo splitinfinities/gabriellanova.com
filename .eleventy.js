@@ -23,8 +23,8 @@ module.exports = function (eleventyConfig) {
   // https://www.11ty.dev/docs/data-deep-merge/
   eleventyConfig.setDataDeepMerge(true);
 
-  // Alias `layout: post` to `layout: layouts/post.njk`
-  eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
+  // Alias `layout: portfolio` to `layout: layouts/portfolio.njk`
+  eleventyConfig.addLayoutAlias("portfolio", "layouts/portfolio.njk");
 
   eleventyConfig.addFilter("isEnvironment", (env) => {
     return process.env.VERCEL_ENV === env;
@@ -60,7 +60,7 @@ module.exports = function (eleventyConfig) {
 
   function filterTagList(tags) {
     return (tags || []).filter(
-      (tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1
+      (tag) => ["all", "nav", "portfolio", "portfolios"].indexOf(tag) === -1
     );
   }
 

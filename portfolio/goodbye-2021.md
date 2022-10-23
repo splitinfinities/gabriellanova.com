@@ -7,7 +7,7 @@ base: green
 date: 2022-01-01
 tags:
   - slice of life
-layout: layouts/post.njk
+layout: layouts/portfolio.njk
 ---
 
 Wow, 2021 went by entirely too fast. My general sentiment around the year is “woof” if that makes sense. Below, I have a few high level things that happened that will help me remember what the hell happened during this blur. 

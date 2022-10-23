@@ -1,7 +1,7 @@
 {
-  "name": "eleventy-base-blog",
+  "name": "gabriellanova.com",
   "version": "5.0.2",
-  "description": "A starter repository for a blog web site using the Eleventy static site generator.",
+  "description": "Gabriella Nova's website",
   "scripts": {
     "build": "eleventy",
     "watch": "eleventy --watch",

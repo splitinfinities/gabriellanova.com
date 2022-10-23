@@ -7,7 +7,7 @@ date: 2021-09-11
 tags:
   - engineering
   - design
-layout: layouts/post.njk
+layout: layouts/portfolio.njk
 ---
 I finally decided to make a blog, which... might be good? I haven't blogged since Xanga was a thing. 
 

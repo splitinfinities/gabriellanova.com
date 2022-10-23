@@ -1,0 +1,35 @@
+{% set latestPost = collections.portfolios | head(-1) %}
+
+{% for post in latestPost | reverse %}
+  <midwest-card tag="a" href="{{ post.url | url }}" 
+  padding="small" small-size="250"
+  style="grid-column: {{grid_column}};"
+  >
+    <header>
+      <p class="text-lg dm:text-white">
+        {% if post.data.title %}
+          {{ post.data.title }}
+        {% else %}
+          <code>{{ post.url }}</code>
+        {% endif %}
+      </p>
+    </header>
+    <section>
+      <copy-wrap clamp="2">
+        <p class="text-sm dm:text-theme-0">{{ post.data.description }}</p>
+      </copy-wrap>
+    </section>
+    <footer class="flex sm:wrap gap-3">
+      <p class="text-xs dm:text-theme-1">
+        <midwest-time class="block" value="{{ post.data.date | htmlDateString }}" relative></midwest-time>
+      </p>
+      <p class="text-xs inline-flex flex-wrap m-0" style="gap: 0.25rem">
+        {% for tag in post.data.tags | filterTagList %}
+          <midwest-tag size="tiny" color="{{ tag | tagColor }}">{{ tag }}</midwest-tag>
+        {% endfor %}
+      </p>
+    </footer>
+  </midwest-card>
+{% endfor %}
+
+

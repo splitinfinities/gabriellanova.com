@@ -1,5 +1,5 @@
-# Oh Snap! It me. 
+# Oh Snap! This is the website for my wife! 
 
-My name is William M. Riley (He/They) and this is my site! On this github repo, I have multiple branches that serve as different versions of my site throughout the years. The current one uses Eleventy. 
+I maintain it for her, and helped design and code it. She's a fantastic producer + storyteller who uses videography and photography to help tell her stories. 
 
-I also have a few branches that use Stencil compiled components within certain frameworks, like Angular, React, Svelte, and Vue... with more to come! 
+Hire her and check out her portfolio at https://gabriellanova.com

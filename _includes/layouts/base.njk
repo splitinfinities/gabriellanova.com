@@ -4,7 +4,7 @@
 {%- from "../macros/enqueue_design.njk" import enqueue_design -%}
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="font-work-sans">
 
 <head>
     <title>{{ title or metadata.title }} • {{name}}</title>
@@ -31,10 +31,89 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="application-name" content="{{ title or metadata.title }}" />
     <meta name="apple-mobile-web-app-title" content="{{ title or metadata.title }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="manifest" href="/manifest.json" />
     <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:wght@400;700&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .font-bona-nova { font-family: "Bona Nova"; }
+        .font-work-sans { font-family: "Work Sans"; }
+
+        :root {
+            --text-shadow: 1px 1px var(--tsc), -1px 1px var(--tsc), 1px -1px var(--tsc), -1px -1px var(--tsc),
+                           2px 2px var(--tsc), -2px 2px var(--tsc), 2px -2px var(--tsc), -2px -2px var(--tsc);
+        }
+
+        :root {
+            --tsc: white;
+        }
+
+        .dark-mode {
+            --tsc: black;
+        }
+        
+
+        copy-wrap h1 {
+            font-size: 4rem;
+        }
+
+        .swiper-container {
+            padding: 0 !important;
+        }
+
+        midwest-button {
+            --text-transform: capitalize;
+
+        }
+
+        copy-wrap h1,
+        copy-wrap h2,
+        copy-wrap h3,
+        copy-wrap h4,
+        copy-wrap h5,
+        copy-wrap h6 { font-family: "Bona Nova"; text-shadow: var(--text-shadow); }
+
+        copy-wrap h1 + p,
+        copy-wrap h2 + p,
+        copy-wrap h3 + p,
+        copy-wrap h4 + p,
+        copy-wrap h5 + p,
+        copy-wrap h6 + p {
+            font-family: "Work Sans";
+        }
+
+        midwest-layout[type="five-column"] {
+            --layout: repeat(5, 1fr);
+            --layout-padding: 2rem;
+        }
+
+        midwest-layout[type="five-column"] > * {
+            grid-column: 2/5
+        }
+
+        @media only screen and (max-width: 800px) {
+            midwest-layout[type="five-column"] {
+                --layout: 1fr 1fr 1fr !important;
+            }
+
+            midwest-layout[type="five-column"] > * {
+                grid-column: 1/4;
+            }
+        }
+
+        @media only screen and (max-width: 450px) {
+            midwest-layout[type="five-column"] {
+                --layout: 1fr !important;
+            }
+
+            midwest-layout[type="five-column"] > * {
+                grid-column: 1;
+            }
+        }
+    </style>
     {% if "production" | isEnvironment %}
         {{ preload_stencil(preload_elements, stencil.formats.esmBrowser, "https://unpkg.com/@midwest-design/core@0.0.16/dist/core/") }}
         {{ enqueue_design() }}
@@ -43,49 +122,56 @@
     {% endif %}
 </head>
 
-<body>
+<body class="font-work-sans bg-white dm:bg-black">
     <midwest-pjax></midwest-pjax>
-    <midwest-theme base="{{theme}}" complement="{{complement}}" system body>
-        <midwest-progress class="fixed top-0 left-0 right-0 z-50" slender="slender"></midwest-progress>
-        <header class="fixed top-0 w-full z-40 h-12 bg-white">
-            <midwest-grid class="flex flex-nowrap" style="gap: 1rem;">
-                <midwest-tabs block="block">
-                  {%- for entry in collections.all | eleventyNavigation %}
-                    <midwest-tab href="{{ entry.url | url }}" tag="link" {% if entry.url == page.url %}open{% endif %}>{{ entry.title }}</midwest-tab>
+    <midwest-theme base="{{theme}}" complement="{{complement}}" system body class="flex flex-wrap flex-col">
+        <midwest-progress class="fixed top-0 left-0 right-0 z-50" slender></midwest-progress>
+        <header class="sticky top-0 w-full z-40 py-4 px-8 bg-white dm:bg-black order-first">
+            <midwest-grid class="h-full items-center">
+                <h1 class="text-black dm:text-white font-bona-nova text-3xl">
+                    <a href="/" class="text-black dm:text-white no-underline">
+                        Gabriella Nova
+                    </a>
+                </h1>
+                <div class="flex gap-4 justify-end">
+                    {%- for entry in collections.all | eleventyNavigation %}
+                    <a href="{{ entry.url | url }}"
+                        ghost
+                        tag="link"
+                        class="text-work-sans text-black dm:text-white {% if entry.url != page.url %}no-underline{% endif %}"
+                        >
+                        {{ entry.title }}
+                    </a>
                   {%- endfor %}
-                </midwest-tabs>
-                {# <midwest-button href="/hire-me" tag="link" style="--width: auto">Hire me</midwest-button> #}
+                </div>
             </midwest-grid>
         </header>
-        <main class="min-h-screen mt-12 {% if templateClass %}{{ templateClass }}{% endif %}" id="main">
-            <animate-presence>
-              {% if show_hero and show_hero !== "home" %}
-                {{ hero(hero_header, hero_content, hero_image_name) }}
-              {% endif %}
-              {% if show_hero === "home" %}
-                {{ home_hero(hero_image_name) }}
-              {% endif %}
 
-              {{ content | safe }}
-            </animate-presence>
-            {# {% if hide_footer !== true %}
-            <midwest-layout size="small">
-                <midwest-starscape></midwest-starscape>
-                <midwest-grid padding="padding">
-                    <midwest-card class="overflow-hidden shadow-lg" tag="a" href="/hire-me" style="--background: var(--theme-6); --background-active: var(--theme-7); --border: 0;">
-                        <section>
-                            <copy-wrap class="relative z-10" align="center">
-                                <midwest-long-shadow>
-                                    <h1 class="text-5xl text-theme-0 complement-{{theme}}">Like what you see?!</h1>
-                                </midwest-long-shadow>
-                                <midwest-button class="relative theme-{{complement}}" tag="span" block="block" size="large">Hire me!</midwest-button>
-                            </copy-wrap>
-                        </section>
-                    </midwest-card>
-                </midwest-grid>
-            </midwest-layout>
-            {% endif %} #}
-        </main>
+        <article style="min-height: 75vh">
+            <main class="{% if templateClass %}{{ templateClass }}{% endif %}" id="main">
+                <animate-presence>
+                {{ content | safe }}
+                </animate-presence>
+            </main>
+        </article>
+
+        <footer class="px-8 py-4 flex place-center flex-wrap flex-col gap-2 filter-blur order-last">
+            <p class="text-black dm:text-white text-center font-bold text-lg">© 2022 Gabriella Nova</p>
+            <div class="flex gap-4 items-center self-center">
+                <midwest-button class="theme-gray" only-icon style="--padding: .5rem;">
+                    <ion-icon slot="icon" name="logo-facebook" class="text-white"></ion-icon>
+                </midwest-button>
+                <midwest-button class="theme-gray" only-icon style="--padding: .5rem;">
+                    <ion-icon slot="icon" name="logo-twitter" class="text-white"></ion-icon>
+                </midwest-button>
+                <midwest-button class="theme-gray" only-icon style="--padding: .5rem;">
+                    <ion-icon slot="icon" name="logo-instagram" class="text-white"></ion-icon>
+                </midwest-button>
+                <midwest-button class="theme-gray" only-icon style="--padding: .5rem;">
+                    <ion-icon slot="icon" name="mail" class="text-white"></ion-icon>
+                </midwest-button>
+            </div>
+        </footer>
     </midwest-theme>
 
     <!-- Current page: {{ page.url | url }} -->
