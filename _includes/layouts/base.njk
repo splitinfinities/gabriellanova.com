@@ -53,6 +53,10 @@
             --tsc: white;
         }
 
+        midwest-layout {
+            --large: 1600px !important;
+        }
+
         .dark-mode {
             --tsc: black;
         }
@@ -97,45 +101,54 @@
         }
 
         midwest-layout[type="five-column"] {
-            --layout: repeat(5, 1fr);
+            --layout: 1fr;
             --layout-padding: 2rem;
+            --layout-grid-gap: 2rem;
+            --layout-width: calc(100% - var(--layout-grid-gap)*2) !important;
+        }
+
+        header midwest-layout {
+            --layout-padding: 0;
         }
 
         midwest-layout[type="five-column"]:not(.fancy-grid) > * {
-            grid-column: 2/5
+            grid-column: 1;
         }
 
-        midwest-layout[type="five-column"].fancy-grid > *.grid-center {
-            grid-column: 2/5
+        .grid-center {
+            grid-column: 1;
         }
 
-        @media only screen and (max-width: 800px) {
+        {# sm breakpoint #}
+        @media only screen and (min-width: 580px) {
             midwest-layout[type="five-column"] {
-                --layout: 1fr 1fr 1fr !important;
+                --layout: 1fr 1fr 1fr;
             }
 
             midwest-layout[type="five-column"]:not(.fancy-grid) > * {
                 grid-column: 1/4;
             }
 
-            midwest-layout[type="five-column"].fancy-grid > *.grid-center {
+            .sm\:grid-center {
                 grid-column: 1/4
             }
         }
 
-        @media only screen and (max-width: 450px) {
+        {# lg breakpoint #}
+        @media only screen and (min-width: 768px) {
             midwest-layout[type="five-column"] {
-                --layout: 1fr !important;
+                --layout: repeat(5, 1fr);
             }
 
             midwest-layout[type="five-column"]:not(.fancy-grid) > * {
-                grid-column: 1;
+                grid-column: 2/5
             }
 
-            midwest-layout[type="five-column"].fancy-grid > *.grid-center {
-                grid-column: 1;
+            .md\:grid-center {
+                grid-column: 2/5
             }
         }
+
     </style>
     {% if "production" | isEnvironment %}
         {{ preload_stencil(preload_elements, stencil.formats.esmBrowser, "https://unpkg.com/@midwest-design/core@0.0.16/dist/core/") }}
@@ -149,14 +162,14 @@
     <midwest-pjax></midwest-pjax>
     <midwest-theme base="{{theme}}" complement="{{complement}}" system body class="flex flex-wrap flex-col">
         <midwest-progress class="fixed top-0 left-0 right-0 z-50" slender></midwest-progress>
-        <header class="sticky top-0 w-full z-40 py-4 px-8 order-first backdrop-filter backdrop-blur-2xl bg-gradient-to-t from-transparent to-white dm:to-black">
-            <midwest-grid class="h-full items-center">
-                <h1 class="text-black dm:text-white font-bona-nova text-3xl">
+        <header class="w-full z-40 py-4 order-first backdrop-filter backdrop-blur-2xl bg-gradient-to-t from-transparent to-white dm:to-black">
+            <midwest-layout type="five-column" size="large" padding="none" align="center" class="fancy-grid" small-size="768">
+                <h1 class="grid-center text-center sm:text-left sm:col-start-1 sm:col-end-3 text-black text-left dm:text-white font-bona-nova text-3xl">
                     <a href="/" class="text-black dm:text-white no-underline">
                         Gabriella Nova
                     </a>
                 </h1>
-                <div class="flex gap-4 justify-end">
+                <div class="grid-center justify-center sm:justify-end sm:col-start-3 sm:col-end-6 flex gap-4">
                     {%- for entry in collections.all | eleventyNavigation %}
                     <a href="{{ entry.url | url }}"
                         ghost
@@ -167,17 +180,17 @@
                     </a>
                   {%- endfor %}
                 </div>
-            </midwest-grid>
+            </midwest-layout>
         </header>
 
         <article>
-            <main class="{% if templateClass %}{{ templateClass }}{% endif %}" id="main">
+            <main class="min-h-screen {% if templateClass %}{{ templateClass }}{% endif %}" id="main">
                 <animate-presence>
                 {{ content | safe }}
                 </animate-presence>
             </main>
 
-            <footer class="sticky bottom-0 z-20 px-8 py-4 flex place-center flex-wrap flex-col gap-2 filter-blur order-last backdrop-filter backdrop-blur-2xl bg-gradient-to-b from-transparent to-white dm:to-black">
+            <footer class="z-20 px-8 py-4 flex place-center flex-wrap flex-col gap-2 filter-blur order-last backdrop-filter backdrop-blur-2xl bg-gradient-to-b from-transparent to-white dm:to-black">
                 <p class="text-black dm:text-white text-center font-bold text-lg">© 2022 Gabriella Nova</p>
                 <div class="flex gap-4 items-center self-center">
                     <midwest-button class="theme-gray" only-icon style="--padding: .5rem;">

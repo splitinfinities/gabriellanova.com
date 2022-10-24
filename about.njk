@@ -11,66 +11,26 @@ eleventyNavigation:
 ---
 
 <midwest-theme base="pink" complement="lime" inert="inert" system></midwest-theme>
-<midwest-layout type="five-column" align="top" size="full">
-    <copy-wrap>
+<midwest-layout type="five-column" align="top" size="large" class="fancy-grid" small-size="768">
+    <copy-wrap class="grid-center sm:grid-center md:grid-center">
         <h1>About</h1>
 
         <p class="mt-4">Gabriella Parsons (she/they) is a Midwest-born-and-raised 90s kid, visual storyteller and freelance documentary filmmaker living in Austin, Texas, with her fiancé and their two adorable Shiba Inus.</p>
     </copy-wrap>
 
-    <copy-wrap class="copy-1">
+    <copy-wrap class="grid-center md:row-start-2 md:row-end-2 md:col-start-2 md:col-end-4">
         <p class="mt-4">Gabriella’s work centers community empowerment, social justice, sense of place, identity and belonging. Whether producing a short doc or helping clients implement communications strategies, Gabriella loves working with teams to bring stories from ideation to completion. Formerly, she worked as an Emerging Media Producer for Nebraska Public Media, Nebraska’s PBS &amp; NPR. </p>
     </copy-wrap>
 
-    <img class="img-1 w-full h-auto" width="300" height="400" src="https://placekitten.com/1200/1600" class="" />
-    <img width="400" class="img-2 w-full h-auto" height="300" src="https://placekitten.com/1600/1200" class="" />
-    <img class="img-3 w-full h-auto" width="300" height="400" src="https://placekitten.com/1200/1600" class="" />
+    <img class="grid-center sm:grid-center md:row-start-2 md:row-end-4 md:col-start-4 md:col-end-6 w-full h-auto" width="300" height="400" src="https://placekitten.com/1200/1600" />
+    <img class="grid-center sm:grid-center md:row-start-3 md:row-end-4 md:col-start-3 md:col-end-4 w-full h-auto" width="400" height="300" src="https://placekitten.com/1600/1200" />
+    <img class="grid-center sm:grid-center md:row-start-3 md:row-end-5 md:col-start-1 md:col-end-3 w-full h-auto" width="300" height="400" src="https://placekitten.com/1200/1600" />
 
-    <copy-wrap class="copy-2">
-        <p class="mt-4">Gabriella holds a Bachelor of Journalism from the University of Nebraska-Lincoln College of Journalism & Mass Communications. During her time at CoJMC, Gabriella was an award-winning fellow of the Global Eyewitness photojournalism program, which she and other CoJMC alums have worked to reform with college</p>
+    <copy-wrap class="grid-center sm:grid-center md:col-start-3 md:col-end-5">
+        <p class="mt-4">Gabriella holds a Bachelor of Journalism from the University of Nebraska-Lincoln College of Journalism &amp; Mass Communications. During her time at CoJMC, Gabriella was an award-winning fellow of the Global Eyewitness photojournalism program, which she and other CoJMC alums have worked to reform with college</p>
     </copy-wrap>
-    <copy-wrap>
-        <p class="mt-4">faculty since 2020. Previously, Gabriella was the Program Coordinator for Untold Migrant Stories, a program of the Asian Community & Cultural Center that empowers immigrant and refugee youth to tell their stories through digital media.</p>
+    <copy-wrap class="grid-center sm:grid-center md:grid-center">
+        <p class="mt-4">faculty since 2020. Previously, Gabriella was the Program Coordinator for Untold Migrant Stories, a program of the Asian Community &amp; Cultural Center that empowers immigrant and refugee youth to tell their stories through digital media.</p>
         <p class="mt-4">Reach out for assignments, collaborations, or just say hi at gabriellaphotovideo [at] gmail.com. </p>
     </copy-wrap>
-
-
 </midwest-layout>
-
-<style>
-    @media only screen and (min-width: 450px) {
-        .img-1 {
-            grid-column: 1/2 !important;
-        }
-
-        .img-2 {
-            grid-column: 2/3 !important;
-        }
-
-        .img-3 {
-            grid-column: 3/4 !important;
-        }
-    }
-
-    @media only screen and (min-width: 800px) {
-        .copy-1 {
-            grid-column: 2/4 !important;
-        }
-
-        .copy-2 {
-            grid-column: 3/5 !important;
-        }
-
-        .img-1 {
-            grid-column: 1/3 !important; grid-row: 3/5;
-        }
-
-        .img-2 {
-            grid-column: 3/4 !important;
-        }
-
-        .img-3 {
-            grid-column: 4/6 !important; grid-row: 2/4;
-        }
-    }
-</style>

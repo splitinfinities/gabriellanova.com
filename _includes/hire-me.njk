@@ -1,20 +1,18 @@
 <midwest-card tag="a" href="/hire-me" 
-padding="small" small-size="250"
-style="grid-column: {{grid_column}};"
+padding="tiny" small-size="250"
+class="overflow-hidden"
 >
-  <section>
-    <copy-wrap clamp="2">
-      <p class="text-sm dm:text-theme-0">{{ post.data.description }}</p>
-    </copy-wrap>
+  <section class="p-0 flush">
+    <img src="https://placekitten.com/900/900" class="h-full w-auto object-cover" />
   </section>
-  <footer class="flex sm:wrap gap-3">
-    <copy-wrap>
-      <h4 class="font-bona-nova">Want to hire me?</h4>
-      <p>Let's collaborate.</p>
-      <midwest-button type="link" icon="true" class="theme-red" padding="small">
+  <footer class="flex sm:wrap gap-3 p-2">
+    <div class="w-full flex flex-col gap-2 justify-start items-start">
+      <h5 class="font-bona-nova m-0">Want to hire me?</h5>
+      <p class="m-0 text-base text-gray-10 dm:text-gray-2">Let's collaborate.</p>
+      <midwest-button type="link" icon="true" padding="small" class="m-0 mr-auto">
         <ion-icon slot="icon" name="share"></ion-icon>
         Hire me
       </midwest-button>
-    </copy-wrap>
+    </div>
   </footer>
 </midwest-card>
