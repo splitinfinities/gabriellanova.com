@@ -44,7 +44,9 @@
 
         :root {
             --text-shadow: 1px 1px var(--tsc), -1px 1px var(--tsc), 1px -1px var(--tsc), -1px -1px var(--tsc),
-                           2px 2px var(--tsc), -2px 2px var(--tsc), 2px -2px var(--tsc), -2px -2px var(--tsc);
+                        2px 2px var(--tsc), -2px 2px var(--tsc), 2px -2px var(--tsc), -2px -2px var(--tsc);
+
+            --pink0: var(--pink-0); --pink1: var(--pink-1); --pink2: var(--pink-2); --pink3: var(--pink-3); --pink4: var(--pink-4); --pink5: var(--pink-5); --pink6: var(--pink-6); --pink7: var(--pink-7); --pink8: var(--pink-8); --pink9: var(--pink-9); --pink10: var(--pink-10); --pink11: var(--pink-11); --pink12: var(--pink-12);
         }
 
         :root {
@@ -54,7 +56,15 @@
         .dark-mode {
             --tsc: black;
         }
+
+        .aspect-4/3 {
+            aspect-ratio: 4/3
+        }
         
+        .embed-container { position: relative; aspect-ratio: 740.4 / 416.47; } 
+        .embed-container iframe, .embed-container object, .embed-container embed { 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+        }
 
         copy-wrap h1 {
             font-size: 4rem;
@@ -66,8 +76,9 @@
 
         midwest-button {
             --text-transform: capitalize;
-
         }
+
+        .pop-treatment {text-shadow: var(--text-shadow);}
 
         copy-wrap h1,
         copy-wrap h2,
@@ -90,7 +101,11 @@
             --layout-padding: 2rem;
         }
 
-        midwest-layout[type="five-column"] > * {
+        midwest-layout[type="five-column"]:not(.fancy-grid) > * {
+            grid-column: 2/5
+        }
+
+        midwest-layout[type="five-column"].fancy-grid > *.grid-center {
             grid-column: 2/5
         }
 
@@ -99,8 +114,12 @@
                 --layout: 1fr 1fr 1fr !important;
             }
 
-            midwest-layout[type="five-column"] > * {
+            midwest-layout[type="five-column"]:not(.fancy-grid) > * {
                 grid-column: 1/4;
+            }
+
+            midwest-layout[type="five-column"].fancy-grid > *.grid-center {
+                grid-column: 1/4
             }
         }
 
@@ -109,7 +128,11 @@
                 --layout: 1fr !important;
             }
 
-            midwest-layout[type="five-column"] > * {
+            midwest-layout[type="five-column"]:not(.fancy-grid) > * {
+                grid-column: 1;
+            }
+
+            midwest-layout[type="five-column"].fancy-grid > *.grid-center {
                 grid-column: 1;
             }
         }
@@ -126,7 +149,7 @@
     <midwest-pjax></midwest-pjax>
     <midwest-theme base="{{theme}}" complement="{{complement}}" system body class="flex flex-wrap flex-col">
         <midwest-progress class="fixed top-0 left-0 right-0 z-50" slender></midwest-progress>
-        <header class="sticky top-0 w-full z-40 py-4 px-8 order-first">
+        <header class="sticky top-0 w-full z-40 py-4 px-8 order-first backdrop-filter backdrop-blur-2xl bg-gradient-to-t from-transparent to-white">
             <midwest-grid class="h-full items-center">
                 <h1 class="text-black dm:text-white font-bona-nova text-3xl">
                     <a href="/" class="text-black dm:text-white no-underline">
@@ -147,31 +170,33 @@
             </midwest-grid>
         </header>
 
-        <article style="min-height: 75vh">
+        <article>
             <main class="{% if templateClass %}{{ templateClass }}{% endif %}" id="main">
                 <animate-presence>
                 {{ content | safe }}
                 </animate-presence>
             </main>
+
+            <footer class="sticky bottom-0 z-20 px-8 py-4 flex place-center flex-wrap flex-col gap-2 filter-blur order-last">
+                <p class="text-black dm:text-white text-center font-bold text-lg">© 2022 Gabriella Nova</p>
+                <div class="flex gap-4 items-center self-center">
+                    <midwest-button class="theme-gray" only-icon style="--padding: .5rem;">
+                        <ion-icon slot="icon" name="logo-facebook" class="text-white"></ion-icon>
+                    </midwest-button>
+                    <midwest-button class="theme-gray" only-icon style="--padding: .5rem;">
+                        <ion-icon slot="icon" name="logo-twitter" class="text-white"></ion-icon>
+                    </midwest-button>
+                    <midwest-button class="theme-gray" only-icon style="--padding: .5rem;">
+                        <ion-icon slot="icon" name="logo-instagram" class="text-white"></ion-icon>
+                    </midwest-button>
+                    <midwest-button class="theme-gray" only-icon style="--padding: .5rem;">
+                        <ion-icon slot="icon" name="mail" class="text-white"></ion-icon>
+                    </midwest-button>
+                </div>
+            </footer>
         </article>
 
-        <footer class="px-8 py-4 flex place-center flex-wrap flex-col gap-2 filter-blur order-last">
-            <p class="text-black dm:text-white text-center font-bold text-lg">© 2022 Gabriella Nova</p>
-            <div class="flex gap-4 items-center self-center">
-                <midwest-button class="theme-gray" only-icon style="--padding: .5rem;">
-                    <ion-icon slot="icon" name="logo-facebook" class="text-white"></ion-icon>
-                </midwest-button>
-                <midwest-button class="theme-gray" only-icon style="--padding: .5rem;">
-                    <ion-icon slot="icon" name="logo-twitter" class="text-white"></ion-icon>
-                </midwest-button>
-                <midwest-button class="theme-gray" only-icon style="--padding: .5rem;">
-                    <ion-icon slot="icon" name="logo-instagram" class="text-white"></ion-icon>
-                </midwest-button>
-                <midwest-button class="theme-gray" only-icon style="--padding: .5rem;">
-                    <ion-icon slot="icon" name="mail" class="text-white"></ion-icon>
-                </midwest-button>
-            </div>
-        </footer>
+
     </midwest-theme>
 
     <!-- Current page: {{ page.url | url }} -->

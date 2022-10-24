@@ -13,9 +13,16 @@ eleventyNavigation:
 
 
 <midwest-theme base="orange" complement="violet" inert="inert" system></midwest-theme>
-<midwest-layout class="bg-gradient-to-r from-theme-3 to-complement-6 dm:from-theme-6 dm:to-complement-11 ">
-  <midwest-grid>
-    {% set postslist = collections.posts %}
-    {% include "postslist.njk" %}
-  </midwest-grid>
+
+<midwest-layout type="five-column" align="top" size="full">
+    <section>
+        <copy-wrap>
+            <h1>Portfolio</h1>
+        </copy-wrap>
+    </section>
+</midwest-layout>
+
+<midwest-layout type="five-column" align="stretch" size="full" class="fill">
+  {% set postslist = collections.portfolios %}
+  {% include "postslist.njk" %}
 </midwest-layout>

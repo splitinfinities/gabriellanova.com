@@ -5,69 +5,31 @@ templateClass: tmpl-portfolio
 
 <midwest-theme base="{{ page.theme }}" complement="{{ page.complement }}" inert system></midwest-theme>
 
-{# <midwest-layout class="bg-theme-7 bg-gradient-to-r from-theme-7 to-theme-9" align="top" size="large">
-    <section>
-        <copy-wrap align="center">
+<midwest-layout size="full" type="five-column" class="fancy-grid">
+  <copy-wrap class="mb-8 grid-center">
+    <h1 class="text-black dm:text-white">{{ title }}</h1>
+    <h4 class="text-gray-10 dm:text-gray-2">{{ subtitle }}</h4>
 
-        </copy-wrap>
-    </section>
-</midwest-layout> #}
+    <p class="text-xs inline-flex flex-wrap" style="gap: 0.25rem">
+      {% for tag in types | filterTagList %}
+        <midwest-tag size="tiny" color="teal">
+          {{ tag }}
+        </midwest-tag>
+      {% endfor %}
+      {% for tag in roles | filterTagList %}
+        <midwest-tag size="tiny" color="pink">
+          {{ tag }}
+        </midwest-tag>
+      {% endfor %}
+      {% for tag in skills | filterTagList %}
+        <midwest-tag size="tiny" color="lime">
+          {{ tag }}
+        </midwest-tag>
+      {% endfor %}
+    </p>
+  </copy-wrap>
 
-<midwest-layout class="bg-gradient-to-br from-theme-1 to-white dm:from-theme-9 dm:to-complement-9">
-  <section>
-    <copy-wrap>
-      <midwest-long-shadow length="150" direction="top-left" shade="2" dark-shade="9">
-        <h1 class="text-white">{{ title }}</h1>
-      </midwest-long-shadow>
-
-      {{ content | safe }}
-
-      <br />
-      <br />
-
-      <p class="flex flex-wrap gap-2">
-        <span>Tagged:</span>
-        {%- for tag in tags | filterTagList -%}
-          {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
-          {# <a href="{{ tagUrl | url }}" class="no-underline"> #}
-            <midwest-tag color="{{ tag | tagColor }}" size="tiny">{{ tag }}</midwest-tag>
-          {# </a> #}
-        {%- endfor %}
-      </p> 
-      <p class="text-theme-9 dm:text-theme-2"><midwest-time value="{{ page.date | htmlDateString }}" relative></midwest-time></p>
-    </copy-wrap>
-  </section>
-  <section><br /><br /><br /></section>
-  <section>
-    {%- if collections.posts %}
-      {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
-      {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-      
-      {%- if nextPost or previousPost %}
-        <midwest-grid cols="2">
-
-          {%- if previousPost %}
-            <div class="flex flex-end flex-col">
-              <midwest-tag size="tiny" class="mb-2">← Previously</midwest-tag>
-
-              {% set postslist = [previousPost] %}
-              {% include "postslist.njk" %}
-            </div>
-          {% endif %}
-          
-          {%- if nextPost %}
-            <div class="flex flex-end flex-col">
-              <midwest-tag size="tiny" class="mb-2">Next →</midwest-tag>
-
-              {% set postslist = [nextPost] %}
-              {% include "postslist.njk" %}
-            </div>
-          {% endif %}
-
-        </midwest-grid>
-      {%- endif %}
-    {%- endif %}
-  </section>
+  {{ content | safe }}
 </midwest-layout>
 
 <style>

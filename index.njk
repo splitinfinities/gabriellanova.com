@@ -8,7 +8,8 @@ preload_elements: [midwest-starscape, midwest-theme, midwest-tag, midwest-image,
 ---
 
 <midwest-theme base="pink" complement="lime" inert="inert" system></midwest-theme>
-<midwest-layout type="five-column" align="top" size="large">
+
+<midwest-layout type="five-column" align="top" size="full">
     <copy-wrap>
         <midwest-slick-slides slides-per-view="1" loop class="flex">
             <midwest-slide>
@@ -26,7 +27,7 @@ preload_elements: [midwest-starscape, midwest-theme, midwest-tag, midwest-image,
     </copy-wrap>
 </midwest-layout>
 
-<midwest-layout type="five-column" align="stretch" size="full" size="large">
+<midwest-layout type="five-column" align="stretch" size="full">
     {% set grid_column = "1/3" %}
     {% include "highlight.njk" %}
     {% set grid_column = "3/5" %}

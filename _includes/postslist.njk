@@ -1,24 +1,53 @@
-<midwest-grid column-width="240" noresponsive column-gap="1">
-  {% for post in postslist | reverse %}
-    <midwest-card tag="a" href="{{ post.url | url }}" padding="small" small-size="250">
-      <header>
-        <p class="text-lg dm:text-white">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></p>
-      </header>
-      <section>
-        <copy-wrap clamp="2">
-          <p class="text-sm dm:text-theme-0">{{ post.data.description }}</p>
+{% for post in postslist %}
+  <midwest-card tag="a" 
+    href="{{ post.url | url }}" 
+    padding="small" 
+    small-size="250"
+    class="overflow-hidden"
+    style="grid-column: {{"auto / span 2" if post.data.highlight else "auto" }};"
+  >
+    <section class="flush p-0">
+      <img src="https://placekitten.com/1600/900" class="h-full w-auto object-cover" />
+    </section>
+    <footer class="flex flex-col gap-1 overflow-x-auto">
+      <h4 class="sticky left-0 text-xl font-bona-nova w-full dm:text-white break-words">
+        {% if post.data.title %}
+          {{ post.data.title }}
+        {% endif %}
+      </h4>
+      <h6 class="sticky left-0 text-sm font-bona-nova w-full text-gray-9 dm:text-gray-2 truncate">
+        {% if post.data.subtitle %}
+          {{ post.data.subtitle }}
+        {% endif %}
+      </h6>
+      
+      {% if post.data.description %}
+        <copy-wrap clamp="2" class="sticky left-0 w-full">
+          <p class="text-sm w-full dm:text-theme-0">{{ post.data.description }}</p>
         </copy-wrap>
-      </section>
-      <footer class="flex sm:wrap gap-3">
-        <p class="text-xs dm:text-theme-1"><midwest-time class="block" value="{{ post.data.date | htmlDateString }}" relative></midwest-time></p>
-        <p class="text-xs inline-flex flex-wrap m-0" style="gap: 0.25rem">
-          {% for tag in post.data.tags | filterTagList %}
-            <midwest-tag size="tiny" color="{{ tag | tagColor }}">{{ tag }}</midwest-tag>
-          {% endfor %}
-        </p>
-      </footer>
-    </midwest-card>
-  {% endfor %}
-</midwest-grid>
+      {% endif %}
 
+      <p class="text-xs inline-flex mr-auto mt-2 overflow-x-auto gap-1">
+        {% for tag in post.data.types | filterTagList | head(-1) %}
+          <midwest-tag size="tiny" color="teal">
+            {{ tag }}
+            {% if post.data.types | length != 1 %} +{{post.data.types | length - 1}} types{% endif %}
+          </midwest-tag>
+        {% endfor %}
+        {% for tag in post.data.roles | filterTagList | head(-1) %}
+          <midwest-tag size="tiny" color="pink">
+            {{ tag }}
+            {% if post.data.roles | length != 1 %} +{{post.data.roles | length - 1}} roles{% endif %}
+          </midwest-tag>
+        {% endfor %}
+        {% for tag in post.data.skills | filterTagList | head(-1) %}
+          <midwest-tag size="tiny" color="lime">
+            {{ tag }}
+            {% if post.data.skills | length != 1 %} +{{post.data.skills | length - 1}} skills{% endif %}
+          </midwest-tag>
+        {% endfor %}
+      </p>
+    </footer>
+  </midwest-card>
+{% endfor %}
 

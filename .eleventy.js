@@ -136,6 +136,56 @@ module.exports = function (eleventyConfig) {
       }),
       slugify: eleventyConfig.getFilter("slug"),
     })
+    .use(customCodeContainer, "vimeo", {
+      validate: function (params) {
+        return params.trim().match(/^vimeo\s+(.*)$/);
+      },
+      render: function (tokens, idx) {
+        var m = tokens[idx].info.trim().match(/^vimeo\s+(.*)$/);
+
+        if (tokens[idx].nesting === 1) {
+          var raw = m[1].match(/\(([^)]+)\)/).pop();
+          args = raw.split(",");
+          video_id = args[0];
+          classlist = args[1].replaceAll('"', "").trim();
+
+          // opening tag
+          return `<div class="embed-container ${classlist}">
+              <iframe
+                src="https://player.vimeo.com/video/${video_id}"
+                frameborder="0"
+                webkitAllowFullScreen
+                mozallowfullscreen
+                allowFullScreen
+              ></iframe></div>`;
+        } else {
+          // closing tag
+          return ``;
+        }
+      },
+    })
+    .use(customCodeContainer, "youtube", {
+      validate: function (params) {
+        return params.trim().match(/^youtube\s+(.*)$/);
+      },
+      render: function (tokens, idx) {
+        var m = tokens[idx].info.trim().match(/^youtube\s+(.*)$/);
+
+        if (tokens[idx].nesting === 1) {
+          var raw = m[1].match(/\(([^)]+)\)/).pop();
+          args = raw.split(",");
+          video_id = args[0];
+          classlist = args[1].replaceAll('"', "").trim();
+
+          // opening tag
+          return `<div class="embed-container ${classlist}">
+              <iframe src='https://www.youtube.com/embed/${video_id}' frameborder='0' allowfullscreen></iframe></div>`;
+        } else {
+          // closing tag
+          return ``;
+        }
+      },
+    })
     .use(customCodeContainer, "code", {
       validate: function (params) {
         return params.trim().match(/^code\s+(.*)$/);
