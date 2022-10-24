@@ -15,7 +15,15 @@ roles:
 layout: layouts/portfolio.njk
 ---
 
-> "As a Black Trans Woman, I Want You to Remember Juneteenth Is About Liberation for All Black People"
+<copy-wrap class="grid-center border-l-4 pl-4 p-2 ">
+
+> "As a Black Trans Woman, I Want You to Remember Juneteenth Is About Liberation for All Black People" 
+>
+> <cite class="font-work-sans">- Dominique Morgan (she/her)</cite>
+
+</copy-wrap>
+
+<copy-wrap class="grid-center mt-8 block">
 
 ### Activist Dominique Morgan writes about the need for intersectionality when honoring Juneteenth. Read her full essay here. 
 
@@ -24,3 +32,5 @@ Dominique Morgan (she/her) is an award-winning artist, activist, and TEDx speake
 Here, in honor of Juneteenth — which celebrates the formal end of slavery in the United States — Morgan writes about her experiences of incarceration, growing up as a young transgender woman, and why intersectionality and liberation of all Black people are crucial aspects of commemorating June 19.
 
 You can read more from the In My Own Words series here.
+
+</copy-wrap>

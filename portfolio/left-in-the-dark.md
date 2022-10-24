@@ -18,7 +18,10 @@ roles:
 layout: layouts/portfolio.njk
 ---
 
+<copy-wrap class="grid-center">
+
 ### *Awarded 5th Place in the 2018-19 Hearst Multimedia IV Team Reporting Competition
 
 Published: August 3, 2018, through the Global Eyewitness Photojournalism Fellowship, University of Nebraska-Lincoln 
 
+</copy-wrap>

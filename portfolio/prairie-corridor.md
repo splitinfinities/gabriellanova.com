@@ -1,5 +1,5 @@
 ---
-title: Title
+title: Prairie Corridor
 name: Gabriella Nova
 description: Project
 image: /assets/img/midwest/full.jpg

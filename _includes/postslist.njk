@@ -3,8 +3,7 @@
     href="{{ post.url | url }}" 
     padding="small" 
     small-size="250"
-    class="overflow-hidden"
-    style="grid-column: {{"auto / span 2" if post.data.highlight else "auto" }};"
+    class="overflow-hidden {{"sm:col-span-2" if post.data.highlight }}"
   >
     <section class="flush p-0">
       <img src="https://placekitten.com/1600/900" class="h-full w-auto object-cover" />

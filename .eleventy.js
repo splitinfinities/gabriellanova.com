@@ -66,6 +66,11 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("filterTagList", filterTagList);
 
+  function filterHighlighted(posts) {
+    return (posts || []).filter((post) => !!post.data.highlight);
+  }
+  eleventyConfig.addFilter("filterHighlighted", filterHighlighted);
+
   function tagColor(tag) {
     if (tag === "design") {
       return "blue";

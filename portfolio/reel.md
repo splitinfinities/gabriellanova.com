@@ -1,5 +1,6 @@
 ---
-title: Title
+title: Reel 2022
+subtitle: Video Showcase
 name: Gabriella Nova
 description: Project
 image: /assets/img/midwest/full.jpg

@@ -1,6 +1,6 @@
-{% set latestPost = collections.portfolios | head(-1) %}
+{% set highlighted = collections.portfolios | filterHighlighted | head(-1) %}
 
-{% for post in latestPost | reverse %}
+{% for post in highlighted | reverse %}
   <midwest-card tag="a" href="{{ post.url | url }}" 
   padding="small" small-size="250"
   style="grid-column: {{grid_column}};"

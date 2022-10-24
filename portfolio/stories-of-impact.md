@@ -1,5 +1,5 @@
 ---
-title: Title
+title: Stories of Impact
 name: Gabriella Nova
 description: Project
 image: /assets/img/midwest/full.jpg

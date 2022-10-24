@@ -1,5 +1,6 @@
 ---
-title: Title
+title: People & Places
+subtitle: Photography Showcase
 name: Gabriella Nova
 description: Project
 image: /assets/img/midwest/full.jpg

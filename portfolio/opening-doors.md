@@ -5,6 +5,7 @@ name: Gabriella Nova
 description:  NeighborWorks Lincoln Opening Doors Fundraiser Videos
 image: /assets/img/midwest/full.jpg
 date: 2021-09-13
+highlight: true
 types:
   - Photojournalism
 skills:

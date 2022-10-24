@@ -149,7 +149,7 @@
     <midwest-pjax></midwest-pjax>
     <midwest-theme base="{{theme}}" complement="{{complement}}" system body class="flex flex-wrap flex-col">
         <midwest-progress class="fixed top-0 left-0 right-0 z-50" slender></midwest-progress>
-        <header class="sticky top-0 w-full z-40 py-4 px-8 order-first backdrop-filter backdrop-blur-2xl bg-gradient-to-t from-transparent to-white">
+        <header class="sticky top-0 w-full z-40 py-4 px-8 order-first backdrop-filter backdrop-blur-2xl bg-gradient-to-t from-transparent to-white dm:to-black">
             <midwest-grid class="h-full items-center">
                 <h1 class="text-black dm:text-white font-bona-nova text-3xl">
                     <a href="/" class="text-black dm:text-white no-underline">
@@ -177,7 +177,7 @@
                 </animate-presence>
             </main>
 
-            <footer class="sticky bottom-0 z-20 px-8 py-4 flex place-center flex-wrap flex-col gap-2 filter-blur order-last">
+            <footer class="sticky bottom-0 z-20 px-8 py-4 flex place-center flex-wrap flex-col gap-2 filter-blur order-last backdrop-filter backdrop-blur-2xl bg-gradient-to-b from-transparent to-white dm:to-black">
                 <p class="text-black dm:text-white text-center font-bold text-lg">© 2022 Gabriella Nova</p>
                 <div class="flex gap-4 items-center self-center">
                     <midwest-button class="theme-gray" only-icon style="--padding: .5rem;">
