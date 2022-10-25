@@ -4,6 +4,7 @@ name: Gabriella Nova
 description: Portrait & Video Series 
 image: /assets/img/default/post.jpg
 image_vertical: /assets/img/default/post-vertical.jpg
+highlight: true
 date: 2021-09-13
 types:
   - Multimedia Project

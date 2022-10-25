@@ -1,6 +1,6 @@
 {% set latestPost = collections.portfolios | head(-1) %}
 
-{% for post in latestPost | reverse %}
+{% for post in latestPost %}
   {% set highlight = true %}
   {% set tag = "Latest" %}
   {% include "post.njk" %}

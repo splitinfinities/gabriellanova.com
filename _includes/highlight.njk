@@ -1,6 +1,6 @@
-{% set highlighted = collections.portfolios | filterHighlighted | head(-1) %}
+{% set highlighted = collections.portfolios | filterHighlighted | head(1) %}
 
-{% for post in highlighted | reverse %}
+{% for post in highlighted %}
   {% set highlight = true %}
   {% set tag = "Highlight" %}
   {% include "post.njk" %}

@@ -6,7 +6,7 @@ image: /assets/img/events/post.jpg
 image_vertical: /assets/img/events/post-vertical.jpg
 date: 2021-09-10
 types:
-  - Photojournalism
+  - Showcase
 skills:
   - Photography
   - 360 Video

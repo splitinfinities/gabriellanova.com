@@ -5,7 +5,7 @@ name: Gabriella Nova
 description: Project
 image: /assets/img/default/post.jpg
 image_vertical: /assets/img/default/post-vertical.jpg
-date: 2021-09-13
+date: 2022-12-30
 types:
   - Photojournalism
 skills:

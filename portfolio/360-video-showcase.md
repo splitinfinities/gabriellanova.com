@@ -2,12 +2,11 @@
 title: Photogrammetry + 360 Video
 subtitle: Video Showcase
 name: Gabriella Nova
-description: Project
 image: /assets/img/default/post.jpg
 image_vertical: /assets/img/default/post-vertical.jpg
 date: 2021-09-11
 types:
-  - Photojournalism
+  - Showcase
 skills:
   - Photogrammetry
   - 360 Video
