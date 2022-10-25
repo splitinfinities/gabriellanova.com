@@ -49,6 +49,27 @@
             --pink0: var(--pink-0); --pink1: var(--pink-1); --pink2: var(--pink-2); --pink3: var(--pink-3); --pink4: var(--pink-4); --pink5: var(--pink-5); --pink6: var(--pink-6); --pink7: var(--pink-7); --pink8: var(--pink-8); --pink9: var(--pink-9); --pink10: var(--pink-10); --pink11: var(--pink-11); --pink12: var(--pink-12);
         }
 
+        html:not(.hydrated) {
+            display: none
+        }
+
+        .site-nav {
+            text-decoration: none;
+        }
+
+        .about-page .site-nav[href*="about"] {
+            text-decoration: underline var(--theme-3,var(--red-3)) 2px;
+        }
+
+        .portfolio-archive .site-nav[href*="portfolio"],
+        .portfolio-single .site-nav[href*="portfolio"] {
+            text-decoration: underline var(--theme-3,var(--red-3)) 2px;
+        }
+
+        .hire-me-page .site-nav[href*="hire-me"] {
+            text-decoration: underline var(--theme-3,var(--red-3)) 2px;
+        }
+
         :root {
             --tsc: white;
         }
@@ -190,7 +211,7 @@
     {% endif %}
 </head>
 
-<body class="font-work-sans">
+<body class="font-work-sans {% if templateClass %}{{ templateClass }}{% endif %}">
     <midwest-pjax></midwest-pjax>
     <midwest-theme base="{{theme}}" complement="{{complement}}" system body class="flex flex-wrap flex-col">
         <midwest-progress class="fixed top-0 left-0 right-0 z-50" slender></midwest-progress>
@@ -206,7 +227,7 @@
                     <a href="{{ entry.url | url }}"
                         ghost
                         tag="link"
-                        class="text-work-sans text-black dm:text-white {% if entry.url != page.url %}no-underline{% endif %}"
+                        class="text-work-sans text-black dm:text-white site-nav"
                         >
                         {{ entry.title }}
                     </a>
@@ -216,7 +237,7 @@
         </header>
 
         <article>
-            <main class="min-h-screen {% if templateClass %}{{ templateClass }}{% endif %}" id="main">
+            <main class="min-h-screen" id="main">
                 <animate-presence>
                 {{ content | safe }}
                 </animate-presence>
@@ -243,6 +264,13 @@
 
 
     </midwest-theme>
+
+    <script>
+        document.addEventListener("pjax:complete", (a) => {
+            let doc = new DOMParser().parseFromString(a.request.response, "text/html")
+            document.querySelector("body").classList = doc.querySelector("body").classList
+        })
+    </script>
 
     <!-- Current page: {{ page.url | url }} -->
 </body>
