@@ -8,7 +8,8 @@
     {% if tag %}
       <midwest-tag class="absolute top-0 left-0 mt-4 ml-4" pill>{{ tag }}</midwest-tag>
     {% endif %}
-    <img src="{{ post.data.image if highlight else post.data.image_vertical }}" class="h-full w-full object-cover" />
+    <img src="{{ post.data.image if highlight else post.data.image_vertical }}" class="hidden md:block h-full w-full object-cover" />
+    <img src="{{ post.data.image }}" class="block md:hidden h-full w-full object-cover" />
   </section>
   <footer class="flex flex-col gap-1 overflow-x-auto">
     <h4 class="sticky left-0 text-xl font-bona-nova w-full dm:text-white break-words">
