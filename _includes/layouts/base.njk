@@ -100,6 +100,10 @@
             font-family: "Work Sans";
         }
 
+        .empty\:hidden:empty {
+            display: none !important;
+        }
+
         .toc ol {
             list-style: number;
             list-style-position: inside;
@@ -110,6 +114,15 @@
         .toc ol a {
             color: var(--gray-9)
         }
+
+        .gallery { height: 100%; overflow: hidden; }
+        .gallery midwest-image {
+            height: 100% !important;
+            aspect-ratio: 16/9;
+            --figure-height: 100% !important;
+            --aspect-ratio: 0 !important;
+        }
+
 
         .dark-mode .toc ol {
             color: var(--white)

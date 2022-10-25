@@ -5,8 +5,8 @@ templateClass: tmpl-portfolio
 
 <midwest-theme base="{{ page.theme if page.theme else "pink" }}" complement="{{ page.complement if page.complement else "lime" }}" inert system></midwest-theme>
 
-<midwest-layout size="large" type="five-column" class="fancy-grid">
-  <copy-wrap class="mb-8 grid-center sm:grid-center md:grid-center">
+<midwest-layout size="large" type="five-column" class="fancy-grid" small-size="768">
+  <copy-wrap class="grid-center sm:grid-center md:grid-center">
     <h1 class="text-black dm:text-white">{{ title }}</h1>
     <h4 class="text-gray-10 dm:text-gray-2">{{ subtitle }}</h4>
 

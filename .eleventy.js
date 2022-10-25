@@ -234,15 +234,16 @@ module.exports = function (eleventyConfig) {
           args = raw.split(",");
           image_name = args[0].replaceAll('"', "").trim();
           image_path = args[1].replaceAll('"', "").trim();
-          width = args[2];
-          height = args[3];
-          classlist = args[1].replaceAll('"', "").trim();
+          width = args[2].trim();
+          height = args[3].trim();
+          classlist = args[4].replaceAll('"', "").trim();
+          styles = args[5]?.replaceAll('"', "")?.trim() ?? "";
           image_src = `/assets/img/${image_path}/${image_name}`;
           image_thumb = `/assets/img/${image_path}/${image_name}-thumb`;
           image_mobile = `/assets/img/${image_path}/${image_name}-mobile`;
 
           // opening tag
-          return `<div class="${classlist}">
+          return `<div class="relative group ${classlist}" style="${styles}">
             <midwest-image width="${width}" height="${height}" preload="${image_thumb}.jpg">
               <source srcset="${image_src}.jpg" type="image/jpeg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
               <source srcset="${image_src}.webp" type="image/webp" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
@@ -253,12 +254,11 @@ module.exports = function (eleventyConfig) {
               <source srcset="${image_mobile}.jpg" type="image/jpeg" media="(max-width:640px)" />
               <source srcset="${image_mobile}.webp" type="image/webp" media="(max-width:640px)" />
             </midwest-image>
-            ${markdownLibrary.utils.escapeHtml(m[1].replace(m[1], ""))}
-          </div>
-          `;
+
+            <div class="absolute bottom-0 left-0 text-xs leading-tight p-2 bg-white dm:bg-black dm:text-white transition-opacity group-hover:opacity-100 opacity-0 empty:hidden">`;
         } else {
           // closing tag
-          return ``;
+          return `</div></div>`;
         }
       },
     })
