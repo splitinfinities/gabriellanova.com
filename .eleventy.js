@@ -255,7 +255,7 @@ module.exports = function (eleventyConfig) {
               <source srcset="${image_mobile}.webp" type="image/webp" media="(max-width:640px)" />
             </midwest-image>
 
-            <div class="absolute bottom-0 left-0 text-xs leading-tight p-2 bg-white dm:bg-black dm:text-white transition-opacity group-hover:opacity-100 opacity-0 empty:hidden">`;
+            <div class="absolute bottom-0 left-0 text-xs leading-tight pointer-events-none p-2 bg-white dm:bg-black dm:text-white transition-opacity group-hover:opacity-100 opacity-0 empty:hidden">`;
         } else {
           // closing tag
           return `</div></div>`;
