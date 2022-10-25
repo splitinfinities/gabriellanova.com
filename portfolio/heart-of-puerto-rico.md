@@ -1,8 +1,9 @@
 ---
-title: Stories of Impact
+title: Heart of Puerto Rico
 name: Gabriella Nova
 description: Project
-image: /assets/img/midwest/full.jpg
+image: /assets/img/default/post.jpg
+image_vertical: /assets/img/default/post-vertical.jpg
 date: 2021-09-12
 highlight: true
 types:
@@ -16,4 +17,4 @@ roles:
 layout: layouts/portfolio.njk
 ---
 
-In collaboration with Collective Impact Lincoln, a nonprofit coalition advocating for housing justice in Lincoln, Nebraska, I used portraiture to uplift stories of individuals and families living in my hometown. Discussions around affordable and adequate housing, and people’s quality of life in their neighborhoods were central to this project. 
+<img src="" />

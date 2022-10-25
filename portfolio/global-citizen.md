@@ -2,7 +2,8 @@
 title: Global Citizen
 name: Gabriella Nova
 description: Activist Dominique Morgan writes about the need for intersectionality when honoring Juneteenth. Read her full essay here. 
-image: /assets/img/midwest/full.jpg
+image: /assets/img/default/post.jpg
+image_vertical: /assets/img/default/post-vertical.jpg
 date: 2021-09-10
 types:
   - Photojournalism

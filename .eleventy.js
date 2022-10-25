@@ -6,6 +6,7 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const customCodeContainer = require("markdown-it-container");
+const pluginTOC = require("eleventy-plugin-toc");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("manifest.json");
@@ -19,6 +20,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
+  eleventyConfig.addPlugin(pluginTOC);
 
   // https://www.11ty.dev/docs/data-deep-merge/
   eleventyConfig.setDataDeepMerge(true);
@@ -183,8 +185,77 @@ module.exports = function (eleventyConfig) {
           classlist = args[1].replaceAll('"', "").trim();
 
           // opening tag
+          return `<div class="${classlist}">
+            <div class="embed-container">
+              <iframe src='https://www.youtube.com/embed/${video_id}' frameborder='0' allowfullscreen></iframe>
+            </div>
+            ${markdownLibrary.utils.escapeHtml(m[1].replace(m[1], ""))}
+          </div>
+          `;
+        } else {
+          // closing tag
+          return ``;
+        }
+      },
+    })
+    .use(customCodeContainer, "sketchfab", {
+      validate: function (params) {
+        return params.trim().match(/^sketchfab\s+(.*)$/);
+      },
+      render: function (tokens, idx) {
+        var m = tokens[idx].info.trim().match(/^sketchfab\s+(.*)$/);
+
+        if (tokens[idx].nesting === 1) {
+          var raw = m[1].match(/\(([^)]+)\)/).pop();
+          args = raw.split(",");
+          video_id = args[0];
+          classlist = args[1].replaceAll('"', "").trim();
+
+          // opening tag
           return `<div class="embed-container ${classlist}">
-              <iframe src='https://www.youtube.com/embed/${video_id}' frameborder='0' allowfullscreen></iframe></div>`;
+              <iframe allow="autoplay; fullscreen; vr" mozallowfullscreen="true" src="https://sketchfab.com/models/b4cc07f5b9b94113be38d809669a2749/embed?autostart=1&amp;wmode=opaque" width="100%" data-embed="true" webkitallowfullscreen="true" frameborder="0" height="480"></iframe>
+              </div>
+              ${markdownLibrary.utils.escapeHtml(m[1].replace(m[1], ""))}`;
+        } else {
+          // closing tag
+          return ``;
+        }
+      },
+    })
+    .use(customCodeContainer, "image", {
+      validate: function (params) {
+        return params.trim().match(/^image\s+(.*)$/);
+      },
+      render: function (tokens, idx) {
+        var m = tokens[idx].info.trim().match(/^image\s+(.*)$/);
+
+        if (tokens[idx].nesting === 1) {
+          var raw = m[1].match(/\(([^)]+)\)/).pop();
+          args = raw.split(",");
+          image_name = args[0].replaceAll('"', "").trim();
+          image_path = args[1].replaceAll('"', "").trim();
+          width = args[2];
+          height = args[3];
+          classlist = args[1].replaceAll('"', "").trim();
+          image_src = `/assets/img/${image_path}/${image_name}`;
+          image_thumb = `/assets/img/${image_path}/${image_name}-thumb`;
+          image_mobile = `/assets/img/${image_path}/${image_name}-mobile`;
+
+          // opening tag
+          return `<div class="${classlist}">
+            <midwest-image width="${width}" height="${height}" preload="${image_thumb}.jpg">
+              <source srcset="${image_src}.jpg" type="image/jpeg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
+              <source srcset="${image_src}.webp" type="image/webp" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
+              <source srcset="${image_mobile}.jpg" type="image/jpeg" media="(min-width:1023px)" />
+              <source srcset="${image_mobile}.webp" type="image/webp" media="(min-width:1023px)" />
+              <source srcset="${image_src}.jpg" type="image/jpeg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
+              <source srcset="${image_src}.webp" type="image/webp" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
+              <source srcset="${image_mobile}.jpg" type="image/jpeg" media="(max-width:640px)" />
+              <source srcset="${image_mobile}.webp" type="image/webp" media="(max-width:640px)" />
+            </midwest-image>
+            ${markdownLibrary.utils.escapeHtml(m[1].replace(m[1], ""))}
+          </div>
+          `;
         } else {
           // closing tag
           return ``;

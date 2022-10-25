@@ -3,7 +3,8 @@ title: Opening Doors
 subtitle: NeighborWorks Lincoln Fundraiser Videos
 name: Gabriella Nova
 description:  NeighborWorks Lincoln Opening Doors Fundraiser Videos
-image: /assets/img/midwest/full.jpg
+image: /assets/img/default/post.jpg
+image_vertical: /assets/img/default/post-vertical.jpg
 date: 2021-09-13
 highlight: true
 types:

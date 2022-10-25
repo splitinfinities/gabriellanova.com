@@ -1,8 +1,9 @@
 ---
 title: All Rise
-subtitle: Civic Nebraska
+subtitle: A Project for Civic Nebraska
 name: Gabriella Nova
-image: /assets/img/midwest/full.jpg
+image: /assets/img/all-rise/post.jpg
+image_vertical: /assets/img/all-rise/post-vertical.jpg
 date: 2021-09-10
 types:
   - Photojournalism
@@ -16,9 +17,19 @@ roles:
 layout: layouts/portfolio.njk
 ---
 
-<copy-wrap class="grid-center">
+<copy-wrap class="grid-center sm:grid-center md:row-start-2 md:col-start-4 md:col-end-6">
+
+## Story
 
 We believe all means all. That we’re all in it together. That democracy is not a spectator sport. That building an engaged and informed society takes hard work – and so we do that work. Most of all, we believe that when one of us rises, we all rise. With your support, Civic Nebraska creates a more modern and robust democracy for all Nebraskans.
+
+</copy-wrap>
+
+::: youtube (NF84g6jdjhs, "grid-center sm:grid-center md:row-start-2 md:col-start-1 md:col-end-4") :::
+
+<copy-wrap class="grid-center sm:grid-center md:grid-center">
+
+## Awards and Citations
 
 **Music**: The Vibes' by AudioBinger, 'Get Up' by AudioBinger, 'Awake' by Blue Dot Sessions 
 
