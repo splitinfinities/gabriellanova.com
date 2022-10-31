@@ -2,8 +2,8 @@
 title: Photogrammetry + 360 Video
 subtitle: Video Showcase
 name: Gabriella Nova
-image: /assets/img/default/post.jpg
-image_vertical: /assets/img/default/post-vertical.jpg
+image: /assets/img/360-video-showcase/y-no-habia-luz.gif
+image_vertical: /assets/img/360-video-showcase/y-no-habia-luz.gif
 date: 2021-09-11
 types:
   - Showcase
@@ -16,7 +16,9 @@ roles:
 layout: layouts/portfolio.njk
 ---
 
-<div class="grid-center sm:grid-center md:col-start-1 md:col-end-3">
+<midwest-layout type="half" size="flush" align="start" padding="none" class="grid-center sm:grid-center md:col-start-1 md:col-end-6" style="--layout-grid-gap: 2rem;">
+
+<div>
 
 ## The Fall of the Host
 
@@ -28,7 +30,7 @@ Listen to an exclusive interview with artist Julio Morales as he explains the co
 
 </div>
 
-<div class="grid-center sm:grid-center md:grid-center md:col-start-3 md:col-end-5">
+<div>
 
 ::: sketchfab (b4cc07f5b9b94113be38d809669a2749, "mb-2")
   <cite class="text-xs inline-block leading-normal text-xs">Y No Había Luz: The Fall of The Host by gabriellap on Sketchfab. This 3D model was made using images captured with a DSLR camera and rendered in Pix4D software.</cite>
@@ -36,9 +38,11 @@ Listen to an exclusive interview with artist Julio Morales as he explains the co
 
 </div>
 
+</midwest-layout>
+
 <hr class="grid-center sm:grid-center md:grid-center bg-gray-0" />
 
-<div class="grid-center sm:grid-center md:col-start-3 md:col-end-5">
+<div class="grid-center sm:grid-center md:col-start-3 md:col-end-6 md:row-start-3">
 
 ## 360° video: Keystone XL Pipeline Hearing 
 

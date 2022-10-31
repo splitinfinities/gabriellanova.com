@@ -24,6 +24,6 @@ eleventyNavigation:
 </midwest-layout>
 
 <midwest-layout type="five-column" align="stretch" size="large" class="fancy-grid">
-  {% set postslist = collections.portfolios %}
+  {% set postslist = collections.portfolios | reverse %}
   {% include "postslist.njk" %}
 </midwest-layout>
