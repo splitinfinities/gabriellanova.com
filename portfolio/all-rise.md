@@ -4,7 +4,7 @@ subtitle: A Project for Civic Nebraska
 name: Gabriella Nova
 image: /assets/img/all-rise/post.jpg
 image_vertical: /assets/img/all-rise/post-vertical.jpg
-date: 2019-08-27
+date: 2021-09-20
 types:
   - Photojournalism
 skills:
