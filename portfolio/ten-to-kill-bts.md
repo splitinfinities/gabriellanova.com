@@ -1,0 +1,20 @@
+---
+title: Ten to Kill
+subtitle: Behind the Scenes
+name: Gabriella Nova
+description: Project
+image: /assets/img/default/post.jpg
+image_vertical: /assets/img/default/post-vertical.jpg
+date: 2021-09-11
+highlight: false
+types:
+  - Photojournalism
+skills:
+  - Photogrammetry
+  - 360 Video
+roles:
+  - Producer
+  - Editor
+layout: layouts/portfolio.njk
+---
+

@@ -5,7 +5,7 @@ name: Gabriella Nova
 description: Activist Dominique Morgan writes about the need for intersectionality when honoring Juneteenth.
 image: /assets/img/global-citizen/post.jpg
 image_vertical: /assets/img/global-citizen/post-vertical.jpg
-highlight: true
+highlight: false
 date: 2022-02-17
 types:
   - Photojournalism

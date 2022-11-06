@@ -6,7 +6,7 @@ description: "A Part of the project ‘Left in the Dark: Puerto Rico’s Fight f
 image: /assets/img/heart-of-puerto-rico/post.gif
 image_vertical: /assets/img/heart-of-puerto-rico/post.gif
 date: 2018-08-03
-highlight: true
+highlight: false
 types:
   - Photojournalism
 skills:

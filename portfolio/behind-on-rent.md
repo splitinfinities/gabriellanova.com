@@ -6,7 +6,7 @@ description: A short film that shares the stories of housing-insecure Nebraskans
 image: /assets/img/behind-on-rent/post.jpg
 image_vertical: /assets/img/behind-on-rent/post-vertical.jpg
 date: 2021-09-18
-highlight: true
+highlight: false
 types:
   - Film
 skills:
