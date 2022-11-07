@@ -4,9 +4,9 @@ subtitle: Stories of housing-insecure Nebraskans and their families amid the COV
 name: Gabriella Nova
 description: A short film that shares the stories of housing-insecure Nebraskans and their families amid the COVID-19 pandemic.
 date: 2021-09-18
-order: 1
+order: 7
 gif: false
-highlight: false
+highlight: true
 types:
   - Film
 skills:

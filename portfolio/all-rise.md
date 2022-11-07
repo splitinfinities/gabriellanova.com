@@ -4,7 +4,7 @@ subtitle: A Project for Civic Nebraska
 name: Gabriella Nova
 description: Project
 date: 2021-09-20
-order: 1
+order: 3
 gif: false
 highlight: false
 types:

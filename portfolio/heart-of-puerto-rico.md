@@ -4,7 +4,7 @@ subtitle: "Decolonization through mutual aid in María’s aftermath"
 name: Gabriella Nova
 description: "A Part of the project ‘Left in the Dark: Puerto Rico’s Fight for a Just Recovery’"
 date: 2018-08-03
-order: 1
+order: 8
 highlight: false
 gif: true
 types:

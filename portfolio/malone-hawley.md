@@ -4,9 +4,9 @@ subtitle: A project recounting the history and the modern-day impact of the Malo
 name: Gabriella Nova
 description: In partnership with NeighborWorks Lincoln
 date: 2021-09-13
-order: 1
+order: 9
 gif: true
-highlight: false
+highlight: true
 types:
   - Storytelling
 skills:

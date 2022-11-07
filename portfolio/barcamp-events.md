@@ -4,7 +4,7 @@ subtitle: Omaha, Austin, Lincoln, and more.
 name: Gabriella Nova
 description: Project
 date: 2021-09-11
-order: 0
+order: 1
 gif: false
 highlight: true
 types:

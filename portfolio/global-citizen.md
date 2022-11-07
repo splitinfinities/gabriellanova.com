@@ -4,7 +4,7 @@ subtitle: A profile on Dominique Morgan, an award-winning artist, activist, and 
 name: Gabriella Nova
 description: Activist Dominique Morgan writes about the need for intersectionality when honoring Juneteenth.
 date: 2022-02-17
-order: 1
+order: 8
 gif: false
 highlight: false
 types:

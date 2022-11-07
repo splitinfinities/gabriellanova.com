@@ -4,9 +4,9 @@ subtitle: Subtitle
 name: Gabriella Nova
 description: Project
 date: 2021-09-11
-order: 1
+order: 18
 gif: false
-highlight: false
+highlight: true
 types:
   - Photojournalism
 skills:
