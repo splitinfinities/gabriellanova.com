@@ -1,11 +1,12 @@
 ---
 title: Stories of Impact
+subtitle: Stories of Impact
 name: Gabriella Nova
-description: Portrait & Video Series 
-image: /assets/img/stories-of-impact/post.jpg
-image_vertical: /assets/img/stories-of-impact/post-vertical.jpg
-highlight: false
+description: Portrait & Video Series
 date: 2020-09-13
+order: 1
+gif: false
+highlight: false
 types:
   - Multimedia Project
 skills:

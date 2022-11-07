@@ -5,5 +5,4 @@
   {% for name in elements | elementFileNames(stencil) %}
     <link rel="preload" href="{{path}}{{name}}" as="script" crossorigin />
   {% endfor %}
-
 {%- endmacro -%}

@@ -2,9 +2,11 @@
 title: All Rise
 subtitle: A Project for Civic Nebraska
 name: Gabriella Nova
-image: /assets/img/all-rise/post.jpg
-image_vertical: /assets/img/all-rise/post-vertical.jpg
+description: Project
 date: 2021-09-20
+order: 1
+gif: false
+highlight: false
 types:
   - Photojournalism
 skills:

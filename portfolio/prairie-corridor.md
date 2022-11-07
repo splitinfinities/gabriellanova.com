@@ -3,9 +3,10 @@ title: Prairie Corridor
 subtitle: Welcome to the Prairie Corridor
 name: Gabriella Nova
 description: Filmed in Denton, this video gives a glimpse of the wide open prairie, allowing viewers to imagine themselves there, exploring the land beneath their feet. 
-image: /assets/img/prairie-corridor/post.gif
-image_vertical: /assets/img/prairie-corridor/post.gif
 date: 2021-09-19
+order: 1
+gif: true
+highlight: false
 types:
   - Photojournalism
 skills:

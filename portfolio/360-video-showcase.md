@@ -2,9 +2,11 @@
 title: Photogrammetry + 360 Video
 subtitle: Video Showcase
 name: Gabriella Nova
-image: /assets/img/360-video-showcase/y-no-habia-luz.gif
-image_vertical: /assets/img/360-video-showcase/y-no-habia-luz.gif
+description: Project
 date: 2021-09-11
+order: 1
+gif: true
+highlight: false
 types:
   - Showcase
 skills:

@@ -249,8 +249,8 @@ module.exports = function (eleventyConfig) {
               <source srcset="${image_src}.webp" type="image/webp" media="(min-width:1023px)" />
               <source srcset="${image_mobile}.jpg" type="image/jpeg" media="(max-width:1023px)" />
               <source srcset="${image_mobile}.webp" type="image/webp" media="(max-width:1023px)" />
-              <source srcset="${image_src}.jpg" type="image/jpeg" media="(max-width:640px)" />
-              <source srcset="${image_src}.webp" type="image/webp" media="(max-width:640px)" />
+              <source srcset="${image_src}.jpg" type="image/jpeg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
+              <source srcset="${image_src}.webp" type="image/webp" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
               <source srcset="${image_mobile}.jpg" type="image/jpeg" media="(max-width:640px)" />
               <source srcset="${image_mobile}.webp" type="image/webp" media="(max-width:640px)" />
             </midwest-image>

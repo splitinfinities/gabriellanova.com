@@ -3,9 +3,10 @@ title: Malone Hawley Neighborhood Pride
 subtitle: A project recounting the history and the modern-day impact of the Malone/Hawley Neighborhood
 name: Gabriella Nova
 description: In partnership with NeighborWorks Lincoln
-image: /assets/img/malone-hawley/post.gif
-image_vertical: /assets/img/malone-hawley/post.gif
 date: 2021-09-13
+order: 1
+gif: true
+highlight: false
 types:
   - Storytelling
 skills:

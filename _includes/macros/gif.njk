@@ -1,0 +1,12 @@
+{%- macro gif(image_name, image_path, image_width, image_height, image_classes) -%}
+<midwest-image block nozoom width="{{image_width}}" height="{{image_height}}" preload="/assets/img/{{image_path}}/{{image_name}}-thumb.gif" class="{{image_classes}}" style="--figure-height: 100%;">
+  <source srcset="/assets/img/{{image_path}}/{{image_name}}.gif" type="image/jpeg" media="(min-width:1023px)" />
+  <source srcset="/assets/img/{{image_path}}/{{image_name}}.webp" type="image/webp" media="(min-width:1023px)" />
+  <source srcset="/assets/img/{{image_path}}/{{image_name}}-mobile.gif" type="image/jpeg" media="(max-width:1023px)" />
+  <source srcset="/assets/img/{{image_path}}/{{image_name}}-mobile.webp" type="image/webp" media="(max-width:1023px)" />
+  <source srcset="/assets/img/{{image_path}}/{{image_name}}.gif" type="image/jpeg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
+  <source srcset="/assets/img/{{image_path}}/{{image_name}}.webp" type="image/webp" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
+  <source srcset="/assets/img/{{image_path}}/{{image_name}}-mobile.gif" type="image/jpeg" media="(max-width:640px)" />
+  <source srcset="/assets/img/{{image_path}}/{{image_name}}-mobile.webp" type="image/webp" media="(max-width:640px)" />
+</midwest-image>
+{%- endmacro -%}

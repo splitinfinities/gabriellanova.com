@@ -3,10 +3,10 @@ title: Global Citizen
 subtitle: A profile on Dominique Morgan, an award-winning artist, activist, and TEDx speaker. 
 name: Gabriella Nova
 description: Activist Dominique Morgan writes about the need for intersectionality when honoring Juneteenth.
-image: /assets/img/global-citizen/post.jpg
-image_vertical: /assets/img/global-citizen/post-vertical.jpg
-highlight: false
 date: 2022-02-17
+order: 1
+gif: false
+highlight: false
 types:
   - Photojournalism
 skills:

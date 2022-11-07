@@ -3,10 +3,10 @@ title: Heart of Puerto Rico
 subtitle: "Decolonization through mutual aid in María’s aftermath"
 name: Gabriella Nova
 description: "A Part of the project ‘Left in the Dark: Puerto Rico’s Fight for a Just Recovery’"
-image: /assets/img/heart-of-puerto-rico/post.gif
-image_vertical: /assets/img/heart-of-puerto-rico/post.gif
 date: 2018-08-03
+order: 1
 highlight: false
+gif: true
 types:
   - Photojournalism
 skills:

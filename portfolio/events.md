@@ -2,9 +2,11 @@
 title: Events
 subtitle: Photography Showcase
 name: Gabriella Nova
-image: /assets/img/events/post.jpg
-image_vertical: /assets/img/events/post-vertical.jpg
+description: Project
 date: 2021-09-10
+order: 1
+gif: false
+highlight: false
 types:
   - Showcase
 skills:

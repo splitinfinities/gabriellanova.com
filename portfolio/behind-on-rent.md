@@ -3,9 +3,9 @@ title: Behind On Rent
 subtitle: Stories of housing-insecure Nebraskans and their families amid the COVID-19 pandemic
 name: Gabriella Nova
 description: A short film that shares the stories of housing-insecure Nebraskans and their families amid the COVID-19 pandemic.
-image: /assets/img/behind-on-rent/post.jpg
-image_vertical: /assets/img/behind-on-rent/post-vertical.jpg
 date: 2021-09-18
+order: 1
+gif: false
 highlight: false
 types:
   - Film

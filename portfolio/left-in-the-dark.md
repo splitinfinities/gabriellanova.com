@@ -3,9 +3,10 @@ title: "Left In The Dark"
 subtitle: "Puerto Rico’s Fight for a Just Recovery"
 name: Gabriella Nova
 description: After nearly one year in darkness and more than $100 billion in storm damages from Hurricane Maria, electricity has still not returned to thousands of residents across Puerto Rico, where an estimated 5,000 people died from hurricane-related causes. And yet another disaster, a $73 billion debt, had destroyed Puerto Rico’s infrastructure long before the storms.
-image: /assets/img/left-in-the-dark/post.jpg
-image_vertical: /assets/img/left-in-the-dark/post-vertical.jpg
 date: 2018-08-03
+order: 1
+gif: false
+highlight: false
 types:
   - Multimedia Campaign
 skills:

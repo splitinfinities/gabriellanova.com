@@ -3,9 +3,10 @@ title: Music
 subtitle: Photography Showcase
 name: Gabriella Nova
 description: Project
-image: /assets/img/default/post.jpg
-image_vertical: /assets/img/default/post-vertical.jpg
 date: 2021-09-13
+order: 1
+gif: false
+highlight: false
 types:
   - Photojournalism
 skills:

@@ -1,0 +1,6 @@
+{%- macro video(image_name, image_width, image_height, image_classes) -%}
+<midwest-video playsinline controls="false">
+  <source src="/assets/video/{{image_name}}.mp4" type="video/mp4" />
+  <source src="/assets/video/{{image_name}}.webm" type="video/webm" />
+</midwest-video>
+{%- endmacro -%}

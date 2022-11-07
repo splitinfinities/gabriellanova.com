@@ -3,10 +3,10 @@ title: BarCamp Events
 subtitle: Omaha, Austin, Lincoln, and more.
 name: Gabriella Nova
 description: Project
-image: /assets/img/default/post.jpg
-image_vertical: /assets/img/default/post-vertical.jpg
 date: 2021-09-11
-highlight: false
+order: 0
+gif: false
+highlight: true
 types:
   - Photojournalism
 skills:

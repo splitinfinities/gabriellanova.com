@@ -1,16 +1,25 @@
+{%- from "./macros/image.njk" import image -%}
+{%- from "./macros/gif.njk" import gif -%}
+
 <animate-presence>
   <midwest-card tag="a" 
     href="{{ post.url | url }}" 
     padding="small" 
     small-size="250"
     class="overflow-hidden {{"md:col-span-2" if highlight }}"
+    style="order: {{post.data.order}}"
   >
-    <section class="flush p-0 relative">
+    <section class="flush p-0 relative h-full" style="{{"aspect-ratio: 1400/900;" if highlight else "aspect-ratio: 900/1400;"}}">
       {% if tag %}
         <midwest-tag class="absolute top-0 left-0 mt-4 ml-4" pill>{{ tag }}</midwest-tag>
       {% endif %}
-      <img src="{{ post.data.image if highlight else post.data.image_vertical }}" class="hidden md:block h-full w-full object-cover" loading="lazy" />
-      <img src="{{ post.data.image }}" class="block md:hidden h-full w-full object-cover" loading="lazy" />
+
+      {% if post.data.gif %}
+        {{ gif("post", post.fileSlug, "1600", "900", "h-full w-full object-cover") }}
+      {% else %}
+        {{ image("post-vertical", post.fileSlug, "900", "1200", "block md:hidden h-full w-full object-cover") }}
+        {{ image("post" if highlight else "post-vertical", post.fileSlug, "1600", "900", " hidden md:block h-full w-full object-cover") }}
+      {% endif %}
     </section>
     <footer class="flex flex-col gap-1 overflow-x-auto">
       <h4 class="sticky left-0 text-4xl sm:text-xl font-bona-nova w-full dm:text-white break-words">
