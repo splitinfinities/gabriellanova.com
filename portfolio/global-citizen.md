@@ -20,7 +20,7 @@ layout: layouts/portfolio.njk
 
 <copy-wrap class="grid-center sm:grid-center md:col-start-3 md:col-end-6">
 
-## Story
+## Story (nice)
 
 </copy-wrap>
 
