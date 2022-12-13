@@ -1,5 +1,5 @@
 ---
-title: Angel Floris, for THEM Health
+title: Angel Floris Profile for THEM Health
 subtitle: Subtitle
 name: Gabriella Nova
 description: Profile
