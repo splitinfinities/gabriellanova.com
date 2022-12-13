@@ -8,10 +8,11 @@ order: 3
 gif: false
 highlight: false
 types:
-  - Photojournalism
+  - Documentary 
 skills:
-  - Photogrammetry
-  - 360 Video
+  - Filmmaking 
+  - Creative direction 
+  - Script writing
 roles:
   - Producer
   - Director
