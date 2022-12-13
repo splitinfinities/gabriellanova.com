@@ -6,7 +6,7 @@ description: Project
 date: 2021-09-11
 order: 1
 gif: false
-highlight: true
+highlight: false
 types:
   - Photojournalism
 skills:
