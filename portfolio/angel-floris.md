@@ -1,12 +1,12 @@
 ---
-title: Angel Floris Profile
-subtitle: A profile of weightlifter Angel Flores, known for her sports advocacy and appearance in Queer Eye Season 6, for THEM Health.  
+title: Angel Floris for THEM Health
+subtitle: A video profile of weightlifter Angel Flores for THEM Health
 name: Gabriella Nova
-description: Profile
-date: 2021-09-11
+description: A video profile of weightlifter Angel Flores, known for her sports advocacy and appearance in Queer Eye Season 6. 
+date: 2022-03
 order: 2
 gif: false
-highlight: false
+highlight: true
 types:
   - Social 
   - Video Profile  
