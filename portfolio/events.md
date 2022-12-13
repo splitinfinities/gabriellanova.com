@@ -18,62 +18,23 @@ roles:
 layout: layouts/portfolio.njk
 ---
 
-::: image ("_MG_2205", "events/gallery", 2500, 3750, "gallery md:row-span-2 h-full")
-:::
-
-::: image ("5Z4A0432", "events/gallery", 1500, 2250, "gallery md:row-span-2 md:row-start-1") 
-:::
-
-::: image ("_B4A6964", "events/gallery", 2500, 1370, "gallery") 
-:::
-
-::: image ("5Z4A0482", "events/gallery", 2500, 1667, "gallery") 
-:::
-
-::: image ("5Z4A0643", "events/gallery", 2500, 1825, "gallery") 
-:::
-
-::: image ("5Z4A8959", "events/gallery", 2500, 1825, "gallery") 
-:::
-
-::: image ("20190627_NCVfundraiser_GabriellaParsons_068", "events/gallery", 2500, 1825, "gallery") 
-:::
-
-::: image ("20200704_ArtRally_GabriellaParsons-10", "events/gallery", 2500, 1825, "gallery md:col-span-2 md:row-span-2") 
-:::
-
-::: image ("image-asset-1", "events/gallery", 2500, 1825, "gallery") 
-:::
-
-::: image ("image-asset-2", "events/gallery", 2500, 1825, "gallery") 
-:::
-
-::: image ("image-asset-3", "events/gallery", 2500, 1825, "gallery") 
-:::
-
-::: image ("image-asset-4", "events/gallery", 2500, 1825, "gallery") 
-:::
-
-::: image ("image-asset", "events/gallery", 2500, 1825, "gallery") 
-:::
-
-::: image ("IMG_0880", "events/gallery", 2500, 3750, "gallery md:row-span-2") 
-:::
-
-::: image ("LincolnUnites_024", "events/gallery", 2500, 1825, "gallery") 
-:::
-
-::: image ("LincolnUnites_052", "events/gallery", 2500, 1825, "gallery") 
-:::
-
-::: image ("LincolnUnites_083", "events/gallery", 2500, 1825, "gallery md:row-span-2") 
-:::
-
-::: image ("MesonjixxBTS_003", "events/gallery", 2500, 1825, "gallery") 
-:::
-
-::: image ("MesonjixxBTS_020", "events/gallery", 2500, 1825, "gallery") 
-:::
-
-::: image ("MesonjixxBTS_035", "events/gallery", 2500, 1825, "gallery") 
-:::
+![](./assets/img/events/gallery/_MG_2205.jpg "gallery md:row-span-2 h-full")
+![](./assets/img/events/gallery/5Z4A0432.jpg "gallery md:row-span-2 md:row-start-1")
+![](./assets/img/events/gallery/_B4A6964.jpg "gallery")
+![](./assets/img/events/gallery/5Z4A0482.jpg "gallery")
+![](./assets/img/events/gallery/5Z4A0643.jpg "gallery")
+![](./assets/img/events/gallery/5Z4A8959.jpg "gallery")
+![](./assets/img/events/gallery/20190627_NCVfundraiser_GabriellaParsons_068.jpg "gallery")
+![](./assets/img/events/gallery/20200704_ArtRally_GabriellaParsons-10.jpg "gallery md:col-span-2 md:row-span-2")
+![](./assets/img/events/gallery/image-asset-1.jpg "gallery")
+![](./assets/img/events/gallery/image-asset-2.jpg "gallery")
+![](./assets/img/events/gallery/image-asset-3.jpg "gallery")
+![](./assets/img/events/gallery/image-asset-4.jpg "gallery")
+![](./assets/img/events/gallery/image-asset.jpg "gallery")
+![](./assets/img/events/gallery/IMG_0880.jpg "gallery md:row-span-2")
+![](./assets/img/events/gallery/LincolnUnites_024.jpg "gallery")
+![](./assets/img/events/gallery/LincolnUnites_052.jpg "gallery")
+![](./assets/img/events/gallery/LincolnUnites_083.jpg "gallery md:row-span-2")
+![](./assets/img/events/gallery/MesonjixxBTS_003.jpg "gallery")
+![](./assets/img/events/gallery/MesonjixxBTS_020.jpg "gallery")
+![](./assets/img/events/gallery/MesonjixxBTS_035.jpg "gallery")

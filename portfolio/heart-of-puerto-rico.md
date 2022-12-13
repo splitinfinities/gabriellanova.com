@@ -54,32 +54,14 @@ Their collective efforts have emphasized the need to liberate Puerto Rico.
 
 </copy-wrap>
 
-::: image ("caguas-drone", "heart-of-puerto-rico/gallery", 2500, 1318, "gallery md:col-span-3")
-Overlooking the valley of Caguas, a municipality known as, "the heart of Puerto Rico," at sunrise. Drone photography by Gabriella Parsons, December 2017.
-:::
+![Overlooking the valley of Caguas, a municipality known as, "the heart of Puerto Rico," at sunrise. Drone photography by Gabriella Parsons, December 2017.](./assets/img/heart-of-puerto-rico/gallery/caguas-drone.jpg "gallery md:col-span-3")
 
-::: image ("_G4I3570", "heart-of-puerto-rico/gallery", 2500, 1667, "gallery md:col-span-3")
-The Center for Mutual Aid in Caguas, Puerto Rico, in December 2017, three months after Hurricane Maria hit the island.
-:::
+![The Center for Mutual Aid in Caguas, Puerto Rico, in December 2017, three months after Hurricane Maria hit the island.](./assets/img/heart-of-puerto-rico/gallery/_G4I3570.jpg "gallery md:col-span-3")
 
-::: image ("2017127_Caguas_002", "heart-of-puerto-rico/gallery", 1000, 667, "gallery md:row-start-5 md:col-span-2")
+![ Ear acupuncture is offered at the Center for Mutual Aid each week. Provided by certified acupuncturists who volunteer at the center, the service has helped community members relieve depression, anxiety and trauma that stemmed from Hurricane Maria and its aftermath.](./assets/img/heart-of-puerto-rico/gallery/2017126_CaguasCAM_018.jpg "gallery md:row-start-6 md:col-span-2 md:col-start-4")
 
-##### Food (comida)
+![Modeled after revolutionary movements like those of The Young Lords and The Black Panthers’ free food program, The Center for Mutual Aid serves breakfast and lunch to the community of Caguas on weekdays. This service does not cost money, and can instead be exchanged for people's volunteer time and resources.](./assets/img/heart-of-puerto-rico/gallery/2017127_Caguas_002.jpg "gallery md:row-start-5 md:col-span-2")
 
-Modeled after revolutionary movements like those of The Young Lords and The Black Panthers’ free food program, The Center for Mutual Aid serves breakfast and lunch to the community of Caguas on weekdays. This service does not cost money, and can instead be exchanged for people's volunteer time and resources.
-:::
+![A couple looks out on the coastline in La Perla, where a mutual aid center provides dinner for the community. Some volunteers are with the grassroots organization, Jornada: Se acabaron las Promesas. The sign to the right translates: "Fiscal Control Board: made in Wall Street. Only the people save the people."](./assets/img/heart-of-puerto-rico/gallery/cam-laperla-rooftop.jpg "gallery md:col-span-2")
 
-::: image ("2017126_CaguasCAM_018", "heart-of-puerto-rico/gallery", 1000, 667, "gallery md:row-start-6 md:col-span-2 md:col-start-4")
-
-##### Health (salud)
-
-Ear acupuncture is offered at the Center for Mutual Aid each week. Provided by  certified acupuncturists who volunteer at the center, the service has helped community members relieve depression, anxiety and trauma that stemmed from Hurricane Maria and its aftermath. 
-:::
-
-::: image ("cam-laperla-rooftop", "heart-of-puerto-rico/gallery", 2500, 1667, "gallery md:col-span-2")
-A couple looks out on the coastline in La Perla, where a mutual aid center provides dinner for the community. Some volunteers are with the grassroots organization, Jornada: Se acabaron las Promesas. The sign to the right translates: "Fiscal Control Board: made in Wall Street. Only the people save the people."
-:::
-
-::: image ("overlooking-laperla", "heart-of-puerto-rico/gallery", 2500, 1667, "gallery md:col-span-3")
-The view from el Centro de Apoyo Mutuo in La Perla, a barrio of San Juan, Puerto Rico.
-:::
+![The view from el Centro de Apoyo Mutuo in La Perla, a barrio of San Juan, Puerto Rico.](./assets/img/heart-of-puerto-rico/gallery/overlooking-laperla.jpg "gallery md:col-span-3")

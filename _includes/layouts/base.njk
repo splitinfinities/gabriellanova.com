@@ -205,6 +205,10 @@
             }
         }
 
+        p:empty, br {
+            display: none !important;
+        }
+
     </style>
     {% if "production" | isEnvironment %}
         {{ preload_stencil(preload_elements, stencil.formats.esmBrowser, "https://unpkg.com/@midwest-design/core@0.0.16/dist/core/") }}

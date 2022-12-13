@@ -5,8 +5,10 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const markdownItEleventyImg = require("markdown-it-eleventy-img");
 const customCodeContainer = require("markdown-it-container");
 const pluginTOC = require("eleventy-plugin-toc");
+const Image = require("@11ty/eleventy-img");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("manifest.json");
@@ -222,44 +224,92 @@ module.exports = function (eleventyConfig) {
         }
       },
     })
-    .use(customCodeContainer, "image", {
-      validate: function (params) {
-        return params.trim().match(/^image\s+(.*)$/);
+    .use(markdownItEleventyImg, {
+      imgOptions: {
+        widths: ["auto", 750, 75],
+        urlPath: "/assets/img/",
+        outputDir: "./_site/assets/img/",
+        formats: ["webp", "jpeg"],
       },
-      render: function (tokens, idx) {
-        var m = tokens[idx].info.trim().match(/^image\s+(.*)$/);
+      renderImage(image, attributes) {
+        const [_Image, options] = image;
+        const [src, attrs] = attributes;
 
-        if (tokens[idx].nesting === 1) {
-          var raw = m[1].match(/\(([^)]+)\)/).pop();
-          args = raw.split(",");
-          image_name = args[0].replaceAll('"', "").trim();
-          image_path = args[1].replaceAll('"', "").trim();
-          width = args[2].trim();
-          height = args[3].trim();
-          classlist = args[4].replaceAll('"', "").trim();
-          styles = args[5]?.replaceAll('"', "")?.trim() ?? "";
-          image_src = `/assets/img/${image_path}/${image_name}`;
-          image_thumb = `/assets/img/${image_path}/${image_name}-thumb`;
-          image_mobile = `/assets/img/${image_path}/${image_name}-mobile`;
+        Image(src, options);
 
-          // opening tag
-          return `<div class="relative group ${classlist}" style="${styles}">
-            <midwest-image width="${width}" height="${height}" preload="${image_thumb}.jpg">
-              <source srcset="${image_src}.jpg" type="image/jpeg" media="(min-width:1023px)" />
-              <source srcset="${image_src}.webp" type="image/webp" media="(min-width:1023px)" />
-              <source srcset="${image_mobile}.jpg" type="image/jpeg" media="(max-width:1023px)" />
-              <source srcset="${image_mobile}.webp" type="image/webp" media="(max-width:1023px)" />
-              <source srcset="${image_src}.jpg" type="image/jpeg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
-              <source srcset="${image_src}.webp" type="image/webp" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
-              <source srcset="${image_mobile}.jpg" type="image/jpeg" media="(max-width:640px)" />
-              <source srcset="${image_mobile}.webp" type="image/webp" media="(max-width:640px)" />
+        const metadata = Image.statsSync(src, options);
+
+        const webp_m = metadata["webp"][1];
+        const webp_t = metadata["webp"][0];
+        const webp_src = metadata["webp"][2];
+
+        const jpg_m = metadata["jpeg"][1];
+        const jpg_src = metadata["jpeg"][metadata["jpeg"].length - 1];
+
+        const image_path = src
+          .replace("./assets/img/", "")
+          .replace(/\.[^/.]+$/, "");
+
+        const image_base = `/assets/img`;
+
+        const captionClasses =
+          "absolute bottom-0 left-0 text-xs leading-tight pointer-events-none p-2 bg-white dm:bg-black dm:text-white transition-opacity group-hover:opacity-100 opacity-0 empty:hidden";
+
+        const caption = attrs.alt
+          ? `<figcaption>${attrs.alt}</figcaption>`
+          : "";
+
+        return `<figure class="relative group ${attrs.title}">
+            <midwest-image
+            width="${jpg_src?.width || "ERR"}"
+            height="${jpg_src?.height || "ERR"}"
+            preload="${image_base}/${webp_t?.filename || "ERR"}">
+              <source
+                srcset="${image_base}/${jpg_src?.filename || "ERR"}" 
+                type="image/jpeg" 
+                media="(min-width:1023px)" 
+              />
+              <source
+                srcset="${image_base}/${webp_src?.filename || "ERR"}" 
+                type="image/webp" 
+                media="(min-width:1023px)" 
+              />
+              <source
+                srcset="${image_base}/${jpg_m?.filename || "ERR"}" 
+                type="image/jpeg" 
+                media="(max-width:1023px)" 
+              />
+              <source
+                srcset="${image_base}/${webp_m?.filename || "ERR"}" 
+                type="image/webp" 
+                media="(max-width:1023px)" 
+              />
+              <source
+                srcset="${image_base}/${jpg_src?.filename || "ERR"}" 
+                type="image/jpeg" 
+                media="(max-width:640px) and (min-device-pixel-ratio: 2)" 
+              />
+              <source
+                srcset="${image_base}/${webp_src?.filename || "ERR"}" 
+                type="image/webp" 
+                media="(max-width:640px) and (min-device-pixel-ratio: 2)" 
+              />
+              <source
+                srcset="${image_base}/${jpg_m?.filename || "ERR"}" 
+                type="image/jpeg" 
+                media="(max-width:640px)" 
+              />
+              <source
+                srcset="${image_base}/${webp_m?.filename || "ERR"}" 
+                type="image/webp" 
+                media="(max-width:640px)" 
+              />
             </midwest-image>
 
-            <copy-wrap class="absolute bottom-0 left-0 text-xs leading-tight pointer-events-none p-2 bg-white dm:bg-black dm:text-white transition-opacity group-hover:opacity-100 opacity-0 empty:hidden">`;
-        } else {
-          // closing tag
-          return `</copy-wrap></div>`;
-        }
+            <figcaption>
+              <copy-wrap class="${captionClasses}">${caption}</copy-wrap>
+            </figcaption>
+          </figure>`;
       },
     })
     .use(customCodeContainer, "code", {
@@ -288,6 +338,7 @@ module.exports = function (eleventyConfig) {
         }
       },
     });
+
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   // Override Browsersync defaults (used only with --serve)

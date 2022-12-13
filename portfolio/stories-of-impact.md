@@ -32,38 +32,24 @@ In collaboration with Collective Impact Lincoln, a nonprofit coalition advocatin
 
 </copy-wrap>
 
-::: image ("20181013_NearSouth_003", "stories-of-impact/gallery", 750, 1125, "gallery md:row-span-2 md:row-start-4 h-full") 
-:::
+![](./assets/img/stories-of-impact/gallery/20181013_NearSouth_003.jpg "gallery md:row-span-2 md:row-start-4 h-full")
 
-::: image ("Florine_Clinton", "stories-of-impact/gallery", 750, 1125, "gallery md:row-span-2 h-full") 
-:::
+![](./assets/img/stories-of-impact/gallery/Florine_Clinton.jpg "gallery md:row-span-2 h-full")
 
-::: image ("20181013_NearSouth_005", "stories-of-impact/gallery", 750, 1125, "gallery md:row-span-4 md:col-start-1 md:col-end-3 md:row-start-3 h-full") 
-:::
+![](./assets/img/stories-of-impact/gallery/20181013_NearSouth_005.jpg "gallery md:row-span-4 md:col-start-1 md:col-end-3 md:row-start-3 h-full")
 
-::: image ("20180923_CollectiveImpactLincoln_010", "stories-of-impact/gallery", 750, 1125, "gallery md:row-span-3 h-full") 
-:::
+![](./assets/img/stories-of-impact/gallery/20180923_CollectiveImpactLincoln_010.jpg "gallery md:row-span-3 h-full")
 
-::: image ("LemusFamily_Everett", "stories-of-impact/gallery", 1500, 1000, "gallery") 
-:::
+![](./assets/img/stories-of-impact/gallery/LemusFamily_Everett.jpg "gallery")
 
-::: image ("ParHser_HtooSay_NearSouth", "stories-of-impact/gallery", 750, 1125, "gallery") 
-:::
+![](./assets/img/stories-of-impact/gallery/ParHser_HtooSay_NearSouth.jpg "gallery")
 
-::: image ("Anas_Zinah_Belmont", "stories-of-impact/gallery", 1500, 1000, "gallery md:col-span-2") 
-:::
+![](./assets/img/stories-of-impact/gallery/Anas_Zinah_Belmont.jpg "gallery md:col-span-2")
 
-::: image ("Wal_Hartley_2", "stories-of-impact/gallery", 750, 1125, "gallery md:col-span-2") 
-:::
+![](./assets/img/stories-of-impact/gallery/Wal_Hartley_2.jpg "gallery md:col-span-2")
 
-::: image ("Karen_Clinton", "stories-of-impact/gallery", 750, 1125, "gallery") 
-:::
+![](./assets/img/stories-of-impact/gallery/Karen_Clinton.jpg "gallery")
 
-::: image ("linda", "stories-of-impact/gallery", 750, 1125, "gallery md:col-span-2") 
-:::
+![](./assets/img/stories-of-impact/gallery/Sakeena_Belmont.jpg "gallery md:col-span-3 w-full")
 
-::: image ("Sakeena_Belmont", "stories-of-impact/gallery", 1500, 1000, "gallery md:col-span-3 w-full") 
-:::
-
-::: image ("Jimena_Everett", "stories-of-impact/gallery", 750, 1125, "gallery md:col-span-2") 
-:::
+![](./assets/img/stories-of-impact/gallery/Jimena_Everett.jpg "gallery md:col-span-2")
