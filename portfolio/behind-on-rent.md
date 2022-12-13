@@ -1,18 +1,21 @@
 ---
 title: Behind On Rent
-subtitle: Stories of housing-insecure Nebraskans and their families amid the COVID-19 pandemic
+subtitle: Nebraska stories of housing justice amid the COVID-19 pandemic
 name: Gabriella Nova
 description: A short film that shares the stories of housing-insecure Nebraskans and their families amid the COVID-19 pandemic.
-date: 2021-09-18
-order: 7
+date: 2020-12-18
+order: 3
 gif: false
 highlight: true
 types:
-  - Film
+  - Documentary
+  - Episodic
 skills:
-  - Photogrammetry
-  - 360 Video
+  - Community-centered storytelling 
+  - Directing 
+  - Editing 
 roles:
+  - Director
   - Producer
   - Editor
 layout: layouts/portfolio.njk
@@ -49,8 +52,12 @@ Watch a virtual Q+A / Roundtable with filmmaker Gabriella Parsons, Community Org
 
 ## Awards and Citations
 
-Awarded 5th Place in the 2018-19 Hearst Multimedia IV Team Reporting Competition
+Finalist, Best Series Episode Award, Oregon Documentary Film Festival 2021
+Official Selection, Oregon Documentary Film Festival 2021
+Official Selection, Morehouse College Human Rights Film Festival 2021 
+Official Selection, Lift-Off Global Network Los Angeles 2021 
+Official Selection, Hollywood First Time Filmmaker Showcase 2021 
 
-Published: August 3, 2018, through the Global Eyewitness Photojournalism Fellowship, University of Nebraska-Lincoln 
+Published: The film was released online in four parts throughout December 2020. The full-length film debuted on YouTube December 18, 2020 at a virtual Zoom community screening. 
 
 </copy-wrap>
