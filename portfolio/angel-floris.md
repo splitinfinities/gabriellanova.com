@@ -1,20 +1,21 @@
 ---
-title: Angel Floris
+title: Angel Floris, for THEM Health
 subtitle: Subtitle
 name: Gabriella Nova
-description: Project
+description: Profile
 date: 2021-09-11
 order: 2
 gif: false
 highlight: false
 types:
-  - Photojournalism
+  - Social 
+  - Video Profile  
+  - Commercial 
 skills:
-  - Photogrammetry
-  - 360 Video
+  - Direction
+  - Video production 
 roles:
-  - Producer
-  - Editor
+  - Director of Photography
 layout: layouts/portfolio.njk
 ---
 
