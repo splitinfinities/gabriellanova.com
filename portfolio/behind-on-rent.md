@@ -53,9 +53,13 @@ Watch a virtual Q+A / Roundtable with filmmaker Gabriella Parsons, Community Org
 ## Awards and Citations
 
 Finalist, Best Series Episode Award, Oregon Documentary Film Festival 2021
+  
 Official Selection, Oregon Documentary Film Festival 2021
+  
 Official Selection, Morehouse College Human Rights Film Festival 2021 
+  
 Official Selection, Lift-Off Global Network Los Angeles 2021 
+  
 Official Selection, Hollywood First Time Filmmaker Showcase 2021 
 
 Published: The film was released online in four parts throughout December 2020. The full-length film debuted on YouTube December 18, 2020 at a virtual Zoom community screening. 
