@@ -34,6 +34,17 @@ module.exports = function (eleventyConfig) {
     return process.env.VERCEL_ENV === env;
   });
 
+  eleventyConfig.addFilter(
+    "getCollectionItemsBySlug",
+    (collection, slugArray = []) => {
+      function fileSlugInSlugArray(item) {
+        return slugArray.includes(item.fileSlug);
+      }
+
+      return collection.filter(fileSlugInSlugArray);
+    }
+  );
+
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
       "dd LLL yyyy"

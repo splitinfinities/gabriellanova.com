@@ -43,6 +43,24 @@ templateClass: portfolio-single
   {{ content | safe }}
 </midwest-layout>
 
+{% if related %}
+  <midwest-layout size="full" class="bg-gray-1 dm:bg-gray-12" style="--layout-padding: 1rem;">
+    <copy-wrap class="mt-4" align="center">
+      <h4>Related Projects</h4>
+    </copy-wrap>
+  </midwest-layout>
+
+  <midwest-layout size="full" class="bg-gray-1 dm:bg-gray-12 pb-4" type="five-column" class="fancy-grid" small-size="768" style="--layout-padding: 1rem;">
+    {% set posts = collections.portfolios | getCollectionItemsBySlug(related) %}
+    {% for post in posts %}
+      {% set highlight = true %}
+      {% include "post.njk" %}
+    {% endfor %}
+
+    {% include "hire-me.njk" %}
+  </midwest-layout>
+{% endif %}
+
 <style>
   midwest-image + p,
   midwest-grid + p,
