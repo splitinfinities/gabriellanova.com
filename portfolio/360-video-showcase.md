@@ -1,5 +1,5 @@
 ---
-title: Photogrammetry + 360 Video
+title: Photogrammetry & 360 Video
 subtitle: Video Showcase
 name: Gabriella Nova
 description: Project
@@ -11,7 +11,8 @@ types:
   - Showcase
 skills:
   - Photogrammetry
-  - 360 photo/video 
+  - 360 photo/video
+  - Spatial Audio editing
 roles:
   - Producer
   - Editor
@@ -29,13 +30,12 @@ Experience this interactive 3D model of a sculpture by Puerto Rican theatre comp
 This piece, part of the exhibition “El Circo de la Ausencia (Absence Circus),” speaks to the history of Puerto Rico, when its governor transitioned the island into a colony of the United States. By looking back on Puerto Rico’s past, this piece draws critical questions about Puerto Rico’s current political status, including: Who benefits from a colonial relationship? And what kind of political identity could Puerto Rico have in the future?
 
 Listen to an exclusive interview with artist Julio Morales as he explains the concept behind the sculpture and reflects on the island post-hurricane María. 
-
 </div>
 
 <div>
 
 ::: sketchfab (b4cc07f5b9b94113be38d809669a2749, "mb-2")
-  <cite class="text-xs inline-block leading-normal text-xs">Y No Había Luz: The Fall of The Host by gabriellap on Sketchfab. This 3D model was made using images captured with a DSLR camera and rendered in Pix4D software.</cite>
+  <cite class="text-xs inline-block leading-normal text-xs">Y No Había Luz: The Fall of The Host by gabriellap on Sketchfab. This 3D model was made using images captured with a DSLR camera and rendered in Pix4D software. Photogrammetry support and instruction by Ben Kreimer. </cite>
 :::
 
 </div>
