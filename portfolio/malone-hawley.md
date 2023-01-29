@@ -5,7 +5,7 @@ name: Gabriella Nova
 description: In partnership with NeighborWorks Lincoln
 date: 2021-09-13
 order: 9
-gif: true
+video: true
 highlight: true
 types:
   - Storytelling

@@ -6,7 +6,7 @@ description: "A Part of the project ‘Left in the Dark: Puerto Rico’s Fight f
 date: 2018-08-03
 order: 8
 highlight: false
-gif: true
+video: true
 types:
   - Photojournalism
 skills:

@@ -1,5 +1,5 @@
-{%- macro video(image_name, image_width, image_height, image_classes) -%}
-<midwest-video playsinline controls="false">
+{%- macro video(image_name, image_width, image_height, image_classes, autoplay, loop) -%}
+<midwest-video playsinline controls="false" width="{{image_width}}" height="{{image_height}}" class="{{image_classes}}" {{ "autoplay" if autoplay }} {{ "loop" if loop }} style="pointer-events: none;">
   <source src="/assets/video/{{image_name}}.mp4" type="video/mp4" />
   <source src="/assets/video/{{image_name}}.webm" type="video/webm" />
 </midwest-video>

@@ -5,7 +5,7 @@ name: Gabriella Nova
 description: Filmed in Denton, this video gives a glimpse of the wide open prairie, allowing viewers to imagine themselves there, exploring the land beneath their feet. 
 date: 2021-09-19
 order: 15
-gif: true
+video: true
 highlight: false
 types:
   - Photojournalism

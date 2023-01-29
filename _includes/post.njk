@@ -1,5 +1,6 @@
 {%- from "./macros/image.njk" import image -%}
 {%- from "./macros/gif.njk" import gif -%}
+{%- from "./macros/video.njk" import video -%}
 
 <animate-presence>
   <midwest-card tag="a" 
@@ -16,6 +17,8 @@
 
       {% if post.data.gif %}
         {{ gif("post", post.fileSlug, "1600", "900", "h-full w-full object-cover") }}
+      {% elif post.data.video %}
+        {{ video(post.fileSlug, "1600", "900", "h-full w-full object-cover", true, true) }}
       {% else %}
         {{ image("post-vertical", post.fileSlug, "900", "1200", "block md:hidden h-full w-full object-cover") }}
         {{ image("post" if highlight else "post-vertical", post.fileSlug, "1600", "900", " hidden md:block h-full w-full object-cover") }}

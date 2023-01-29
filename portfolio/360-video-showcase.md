@@ -5,7 +5,7 @@ name: Gabriella Nova
 description: Project
 date: 2018-03-15
 order: 4
-gif: true
+video: true
 highlight: false
 types:
   - Showcase
