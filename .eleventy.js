@@ -10,6 +10,97 @@ const customCodeContainer = require("markdown-it-container");
 const pluginTOC = require("eleventy-plugin-toc");
 const Image = require("@11ty/eleventy-img");
 
+function imageShortcode(
+  src,
+  attrs = {},
+  options = {
+    widths: ["auto", 750, 75],
+    urlPath: "./assets/img/",
+    outputDir: "./_site/assets/img/",
+    formats: ["webp", "jpeg"],
+  }
+) {
+  try {
+    Image(src, options);
+
+    const metadata = Image.statsSync(src, options);
+
+    const webp_m = metadata["webp"][1];
+    const webp_t = metadata["webp"][0];
+    const webp_src = metadata["webp"][2];
+
+    const jpg_m = metadata["jpeg"][1];
+    const jpg_src = metadata["jpeg"][metadata["jpeg"].length - 1];
+
+    const image_base = `/assets/img`;
+
+    const captionClasses =
+      "absolute bottom-0 left-0 text-xs leading-tight pointer-events-none p-2 bg-white dm:bg-black dm:text-white transition-opacity group-hover:opacity-100 opacity-0 empty:hidden";
+
+    const caption = attrs.alt ? `<figcaption>${attrs.alt}</figcaption>` : "";
+
+    return `<figure class="relative group ${attrs.title} ${attrs.class}">
+      <midwest-image
+      width="${jpg_src?.width * 2 || "ERR"}"
+      height="${jpg_src?.height * 2 || "ERR"}"
+      ${attrs?.nozoom ? "nozoom" : ""}
+      ${attrs?.block ? "block" : ""}
+      class="${attrs.class} h-full"
+      style="${attrs.style}"
+    
+      preload="${image_base}/${webp_t?.filename || "ERR"}">
+        <source
+          srcset="${image_base}/${jpg_src?.filename || "ERR"}" 
+          type="image/jpeg" 
+          media="(min-width:1023px)" 
+        />
+        <source
+          srcset="${image_base}/${webp_src?.filename || "ERR"}" 
+          type="image/webp" 
+          media="(min-width:1023px)" 
+        />
+        <source
+          srcset="${image_base}/${jpg_m?.filename || "ERR"}" 
+          type="image/jpeg" 
+          media="(max-width:1023px)" 
+        />
+        <source
+          srcset="${image_base}/${webp_m?.filename || "ERR"}" 
+          type="image/webp" 
+          media="(max-width:1023px)" 
+        />
+        <source
+          srcset="${image_base}/${jpg_src?.filename || "ERR"}" 
+          type="image/jpeg" 
+          media="(max-width:640px) and (min-device-pixel-ratio: 2)" 
+        />
+        <source
+          srcset="${image_base}/${webp_src?.filename || "ERR"}" 
+          type="image/webp" 
+          media="(max-width:640px) and (min-device-pixel-ratio: 2)" 
+        />
+        <source
+          srcset="${image_base}/${jpg_m?.filename || "ERR"}" 
+          type="image/jpeg" 
+          media="(max-width:640px)" 
+        />
+        <source
+          srcset="${image_base}/${webp_m?.filename || "ERR"}" 
+          type="image/webp" 
+          media="(max-width:640px)" 
+        />
+      </midwest-image>
+
+      <figcaption>
+        <copy-wrap class="${captionClasses}">${caption}</copy-wrap>
+      </figcaption>
+    </figure>`;
+  } catch (e) {
+    console.log("oops");
+    return "";
+  }
+}
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("manifest.json");
   eleventyConfig.addPassthroughCopy("resume.pdf");
@@ -44,6 +135,34 @@ module.exports = function (eleventyConfig) {
       return collection.filter(fileSlugInSlugArray);
     }
   );
+
+  eleventyConfig.addShortcode("image_shortcode", imageShortcode);
+
+  // Return all the types used in a collection
+  eleventyConfig.addFilter("getAllTypes", (collection) => {
+    let typeSet = new Set();
+    for (let item of collection) {
+      (item.data.types || []).forEach((type) => typeSet.add(type));
+    }
+    return Array.from(typeSet);
+  });
+
+  // Return all the skills used in a collection
+  eleventyConfig.addFilter("getAllSkills", (collection) => {
+    let skillSet = new Set();
+    for (let item of collection) {
+      (item.data.skills || []).forEach((skill) => skillSet.add(skill));
+    }
+    return Array.from(skillSet);
+  });
+  // Return all the roles used in a collection
+  eleventyConfig.addFilter("getAllRoles", (collection) => {
+    let roleSet = new Set();
+    for (let item of collection) {
+      (item.data.roles || []).forEach((role) => roleSet.add(role));
+    }
+    return Array.from(roleSet);
+  });
 
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
@@ -246,81 +365,7 @@ module.exports = function (eleventyConfig) {
         const [_Image, options] = image;
         const [src, attrs] = attributes;
 
-        Image(src, options);
-
-        const metadata = Image.statsSync(src, options);
-
-        const webp_m = metadata["webp"][1];
-        const webp_t = metadata["webp"][0];
-        const webp_src = metadata["webp"][2];
-
-        const jpg_m = metadata["jpeg"][1];
-        const jpg_src = metadata["jpeg"][metadata["jpeg"].length - 1];
-
-        const image_path = src
-          .replace("./assets/img/", "")
-          .replace(/\.[^/.]+$/, "");
-
-        const image_base = `/assets/img`;
-
-        const captionClasses =
-          "absolute bottom-0 left-0 text-xs leading-tight pointer-events-none p-2 bg-white dm:bg-black dm:text-white transition-opacity group-hover:opacity-100 opacity-0 empty:hidden";
-
-        const caption = attrs.alt
-          ? `<figcaption>${attrs.alt}</figcaption>`
-          : "";
-
-        return `<figure class="relative group ${attrs.title}">
-            <midwest-image
-            width="${jpg_src?.width || "ERR"}"
-            height="${jpg_src?.height || "ERR"}"
-            preload="${image_base}/${webp_t?.filename || "ERR"}">
-              <source
-                srcset="${image_base}/${jpg_src?.filename || "ERR"}" 
-                type="image/jpeg" 
-                media="(min-width:1023px)" 
-              />
-              <source
-                srcset="${image_base}/${webp_src?.filename || "ERR"}" 
-                type="image/webp" 
-                media="(min-width:1023px)" 
-              />
-              <source
-                srcset="${image_base}/${jpg_m?.filename || "ERR"}" 
-                type="image/jpeg" 
-                media="(max-width:1023px)" 
-              />
-              <source
-                srcset="${image_base}/${webp_m?.filename || "ERR"}" 
-                type="image/webp" 
-                media="(max-width:1023px)" 
-              />
-              <source
-                srcset="${image_base}/${jpg_src?.filename || "ERR"}" 
-                type="image/jpeg" 
-                media="(max-width:640px) and (min-device-pixel-ratio: 2)" 
-              />
-              <source
-                srcset="${image_base}/${webp_src?.filename || "ERR"}" 
-                type="image/webp" 
-                media="(max-width:640px) and (min-device-pixel-ratio: 2)" 
-              />
-              <source
-                srcset="${image_base}/${jpg_m?.filename || "ERR"}" 
-                type="image/jpeg" 
-                media="(max-width:640px)" 
-              />
-              <source
-                srcset="${image_base}/${webp_m?.filename || "ERR"}" 
-                type="image/webp" 
-                media="(max-width:640px)" 
-              />
-            </midwest-image>
-
-            <figcaption>
-              <copy-wrap class="${captionClasses}">${caption}</copy-wrap>
-            </figcaption>
-          </figure>`;
+        return imageShortcode(src, attrs, options);
       },
     })
     .use(customCodeContainer, "code", {

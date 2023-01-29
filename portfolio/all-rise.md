@@ -8,10 +8,10 @@ order: 3
 gif: false
 highlight: false
 types:
-  - Documentary 
+  - Documentary
 skills:
-  - Filmmaking 
-  - Creative direction 
+  - Filmmaking
+  - Creative direction
   - Script writing
 roles:
   - Producer

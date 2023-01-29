@@ -1,10 +1,12 @@
+{%- from "./macros/image.njk" import image -%}
+
 <animate-presence>
   <midwest-card tag="a" href="/hire-me" 
   padding="tiny" small-size="250"
   class="overflow-hidden order-last h-full"
   >
     <section class="p-0 flush">
-      <img src="https://placekitten.com/900/900" class="h-full w-auto object-cover" />
+      {{ image("one", "about", "1600", "900", "h-full object-cover") }}
     </section>
     <footer class="flex sm:wrap gap-3 p-2">
       <div class="w-full flex flex-col gap-2 justify-start items-start">

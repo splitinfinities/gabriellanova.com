@@ -8,7 +8,8 @@ order: 10
 gif: false
 highlight: false
 types:
-  - Multimedia Campaign
+  - Multimedia
+  - Photojournalism
 skills:
   - Photogrammetry
   - 360 Video

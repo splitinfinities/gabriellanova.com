@@ -8,7 +8,7 @@ order: 14
 gif: false
 highlight: true
 types:
-  - Multimedia Project
+  - Multimedia
 skills:
   - Photogrammetry
   - 360 Video

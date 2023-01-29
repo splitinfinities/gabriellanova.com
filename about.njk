@@ -11,6 +11,8 @@ eleventyNavigation:
   order: 1
 ---
 
+{%- from "./_includes/macros/image.njk" import image -%}
+
 <midwest-theme base="pink" complement="lime" inert="inert" system></midwest-theme>
 <midwest-layout type="five-column" align="top" size="large" class="fancy-grid" small-size="768">
     <copy-wrap class="grid-center sm:grid-center md:grid-center">
@@ -23,7 +25,8 @@ eleventyNavigation:
         <p class="mt-4">I’m a born-and-raised Midwest 90s kid whose favorite Christmas gift was a knock-off Walkman from my grandma. In 2018, I earned my Bachelor of Journalism from the University of Nebraska-Lincoln. During my time there, I concentrated on Spanish and women and gender studies. I became an award-winning fellow of the Global Eyewitness photojournalism program, which allowed me to travel to Uganda and Puerto Rico for student reporting projects. I worked for the Asian Community & Cultural Center as the program coordinator for Untold Migrant Stories, which empowers migrant youth to tell their stories through digital media. I currently produce video for SXSW and work on film projects in the Austin area. </p>
     </copy-wrap>
 
-    <img class="grid-center sm:grid-center md:row-start-2 md:col-start-4 md:col-end-6 w-full h-auto" width="300" height="400" src="/assets/img/about/three.jpg" />
+    {{ image("three", "about", "1600", "900", "grid-center sm:grid-center md:row-start-2 md:col-start-4 md:col-end-6 w-full h-auto") }}
+
 
     <copy-wrap class="grid-center sm:grid-center md:grid-center">
         <p class="mt-4">Let’s work together! Reach out for collaborations or assignments at work@gabriellanova.com I’m fully vaccinated against COVID-19 and I’m available to travel or produce remotely. </p>

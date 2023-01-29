@@ -16,7 +16,7 @@ eleventyNavigation:
 <midwest-theme base="orange" complement="violet" inert="inert" system></midwest-theme>
 
 <midwest-layout type="five-column" align="top" size="large">
-    <section>
+    <section class="">
         <copy-wrap>
             <h1>Portfolio</h1>
         </copy-wrap>
@@ -26,4 +26,40 @@ eleventyNavigation:
 <midwest-layout type="five-column" align="stretch" size="large" class="fancy-grid">
   {% set postslist = collections.portfolios | reverse %}
   {% include "postslist.njk" %}
+</midwest-layout>
+
+<midwest-layout type="five-column" align="top" size="large" class="fancy-grid gap-1" style="--layout-grid-gap: 0.5rem;">
+  <section class="col-start-1 col-span-full">
+    <ul class="flex flex-wrap gap-2 items-center">
+    <h6>Types:</h6>
+    {% for type in collections.portfolios | getAllTypes %}
+      {% set typeUrl %}/portfolio/types/{{ type | slug }}/{% endset %}
+      <li><a href="{{ typeUrl }}" class="post-type no-underline">
+        <midwest-tag size="tiny" color="teal">{{ type }}</midwest-tag>
+      </a></li>
+    {% endfor %}
+    </ul>
+  </section>
+  <section class="col-start-1 col-span-full">
+    <ul class="flex flex-wrap gap-2 items-center">
+    <h6>Roles:</h6>
+    {% for role in collections.portfolios | getAllRoles %}
+      {% set roleUrl %}/portfolio/role/{{ role | slug }}/{% endset %}
+      <li><a href="{{ roleUrl }}" class="post-role no-underline">
+        <midwest-tag size="tiny" color="pink">{{ role }}</midwest-tag>
+      </a></li>
+    {% endfor %}
+    </ul>
+  </section>
+  <section class="col-start-1 col-span-full">
+    <ul class="flex flex-wrap gap-2 items-center">
+    <h6>Skills:</h6>
+    {% for skill in collections.portfolios | getAllSkills %}
+      {% set skillUrl %}/portfolio/skill/{{ skill | slug }}/{% endset %}
+      <li><a href="{{ skillUrl }}" class="post-skill no-underline">
+        <midwest-tag size="tiny" color="lime">{{ skill }}</midwest-tag>
+      </a></li>
+    {% endfor %}
+    </ul>
+  </section>
 </midwest-layout>

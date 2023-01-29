@@ -8,12 +8,12 @@ order: 2
 gif: false
 highlight: true
 types:
-  - Social 
-  - Video Profile  
-  - Commercial 
+  - Social
+  - Video Profile
+  - Commercial
 skills:
   - Direction
-  - Video production 
+  - Video Production
 roles:
   - Director of Photography
 layout: layouts/portfolio.njk

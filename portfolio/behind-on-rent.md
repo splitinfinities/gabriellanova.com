@@ -35,7 +35,7 @@ This film debuted on December 18, 2020.
 
 </copy-wrap>
 
-<img src="/assets/img/behind-on-rent/cover.jpg" class="row-start-3 xs:col-start-1 xs:col-end-4 md:row-start-2 md:col-start-1 md:col-end-3" />
+![](./assets/img/behind-on-rent/cover.jpg "row-start-3 xs:col-start-1 xs:col-end-4 md:row-start-2 md:col-start-1 md:col-end-3")
 
 <copy-wrap class="grid-center sm:grid-center md:grid-center mt-6">
 
