@@ -4,7 +4,7 @@ subtitle: Video Showcase
 name: Gabriella Nova
 description: Project
 date: 2018-03-15
-order: 4
+order: 5
 video: true
 highlight: false
 types:

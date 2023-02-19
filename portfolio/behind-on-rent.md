@@ -4,9 +4,9 @@ subtitle: Nebraska stories of housing justice amid the COVID-19 pandemic
 name: Gabriella Nova
 description: A short film that shares the stories of housing-insecure Nebraskans and their families amid the COVID-19 pandemic.
 date: 2020-12-18
-order: 3
+order: 2
 gif: false
-highlight: true
+highlight: false
 types:
   - Documentary
   - Episodic
