@@ -28,7 +28,7 @@ In collaboration with Collective Impact Lincoln, a nonprofit coalition advocatin
 
 <copy-wrap align="center" class="grid-center sm:grid-center md:col-start-3 md:col-end-4">
 
-### Photo gallery
+### Photo Series
 
 </copy-wrap>
 
@@ -52,4 +52,42 @@ In collaboration with Collective Impact Lincoln, a nonprofit coalition advocatin
 
 ![](./assets/img/stories-of-impact/gallery/Sakeena_Belmont.jpg "gallery md:col-span-3 w-full")
 
-![](./assets/img/stories-of-impact/gallery/Jimena_Everett.jpg "gallery md:col-span-2")
+![](./assets/img/stories-of-impact/gallery/Jimena_Everett.jpg "gallery md:col-span-2 md:row-start-7 md:row-span-2 md:col-start-4")
+
+<copy-wrap align="center" class="grid-center sm:grid-center md:grid-center">
+
+### Video Stories
+
+</copy-wrap>
+
+<copy-wrap align="center" class="grid-center sm:grid-center md:grid-center">
+
+##### Stories of Impact: Florine Joseph
+
+::: youtube (gdqwF72p8s8, "mt-4") :::
+
+</copy-wrap>
+
+<copy-wrap align="center" class="grid-center sm:grid-center md:grid-center">
+
+##### Our Name is: Collective Impact Lincoln
+
+::: youtube (595lr4vKEYg, "mt-4") :::
+
+</copy-wrap>
+
+<copy-wrap align="center" class="grid-center sm:grid-center md:grid-center">
+
+##### Stories of Impact: The Belmont Neighborhood
+
+::: youtube (8Ihui2ZlcxE, "mt-4") :::
+
+</copy-wrap>
+
+<copy-wrap align="center" class="grid-center sm:grid-center md:grid-center">
+
+##### Stories of Impact: Linda London
+
+::: youtube (vJrGQjKAyuw, "mt-4") :::
+
+</copy-wrap>
