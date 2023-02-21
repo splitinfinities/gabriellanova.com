@@ -8,12 +8,15 @@ order: 14
 gif: false
 highlight: true
 types:
-  - Multimedia
+  - Photo Essay
+  - Video Series 
 skills:
-  - Photogrammetry
-  - 360 Video
+  - Video Production
+  - Photography 
+  - Community Storytelling
 roles:
   - Producer
+  - Director
   - Editor
 layout: layouts/portfolio.njk
 ---
