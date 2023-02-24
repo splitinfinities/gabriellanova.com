@@ -11,8 +11,9 @@ types:
   - Multimedia
   - Photojournalism
 skills:
-  - Photogrammetry
-  - 360 Video
+  - Copywriting
+  - Video Editing
+  - Event Production
 roles:
   - Managing Editor
   - Producer

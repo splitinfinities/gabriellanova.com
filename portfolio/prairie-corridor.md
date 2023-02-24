@@ -8,10 +8,11 @@ order: 15
 video: true
 highlight: false
 types:
-  - Photojournalism
+  - Video
 skills:
-  - Photogrammetry
-  - 360 Video
+  - Video Production
+  - Drone Production
+  - Voice Over
 roles:
   - Producer
   - Narrator

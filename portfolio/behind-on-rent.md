@@ -11,7 +11,7 @@ types:
   - Documentary
   - Episodic
 skills:
-  - Community-centered storytelling
+  - Community storytelling
   - Directing
   - Editing
 roles:

@@ -8,10 +8,10 @@ order: 12
 video: true
 highlight: false
 types:
-  - Photojournalism
+  - Episodic
 skills:
-  - Photogrammetry
-  - 360 Video
+  - Community Storytelling
+  - Video Production
 roles:
   - Producer
   - Director

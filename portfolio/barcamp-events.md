@@ -4,9 +4,9 @@ subtitle: An annually organized creative un-conference.
 name: Gabriella Nova
 description: Project
 date: 2021-09-11
-order: 5
+order: 6
 gif: false
-highlight: false
+highlight: true
 types:
   - Storytelling
 skills:

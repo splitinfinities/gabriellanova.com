@@ -10,8 +10,8 @@ video: true
 types:
   - Photojournalism
 skills:
-  - Photogrammetry
-  - 360 Video
+  - Video Production
+  - Photography
 roles:
   - Producer
   - Editor

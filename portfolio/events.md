@@ -11,13 +11,12 @@ types:
   - Showcase
 skills:
   - Photography
-  - 360 Video
 roles:
-  - Producer
+  - Photographer
   - Editor
 layout: layouts/portfolio.njk
 ---
-
+<!-- TODO: Make this image the cover photo  -->
 ![](./assets/img/events/gallery/_MG_2205.jpg "gallery md:row-span-2 h-full")
 ![](./assets/img/events/gallery/5Z4A0432.jpg "gallery md:row-span-2 md:row-start-1")
 ![](./assets/img/events/gallery/_B4A6964.jpg "gallery")

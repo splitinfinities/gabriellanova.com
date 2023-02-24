@@ -8,12 +8,12 @@ order: 13
 gif: false
 highlight: false
 types:
-  - Photojournalism
+  - Showcase
 skills:
-  - Photogrammetry
-  - 360 Video
+  - Photojournalism
+  - Film Photography
 roles:
-  - Producer
+  - Photographer
   - Editor
 layout: layouts/portfolio.njk
 ---

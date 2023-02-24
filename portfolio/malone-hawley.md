@@ -4,14 +4,15 @@ subtitle: A project recounting the history and the modern-day impact of the Malo
 name: Gabriella Nova
 description: In partnership with NeighborWorks Lincoln
 date: 2021-09-13
-order: 9
+order: 12
 video: true
 highlight: true
 types:
-  - Storytelling
+  - Episodic
 skills:
-  - Photogrammetry
-  - 360 Video
+  - Community storytelling
+  - Video Editing
+  - Directing
 roles:
   - Producer
   - Director
